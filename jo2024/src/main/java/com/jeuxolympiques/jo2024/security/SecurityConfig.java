@@ -30,11 +30,15 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests(requests -> requests
                         .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
-                        .requestMatchers("/users/inscription").permitAll()
+                        .requestMatchers("/api/users/inscription").permitAll()
                         .requestMatchers("/inscription").permitAll()
-                        .requestMatchers("/welcome").permitAll()
+                        .requestMatchers("/accueil").permitAll()
                         .anyRequest().authenticated())
-                .formLogin(Customizer.withDefaults());
+                .formLogin(form -> form
+                        .loginPage("/connexion") // Redirection personnalisée vers "/connexion"
+                        .permitAll()
+                        .defaultSuccessUrl("/accueil.html") // URL de redirection après connexion réussie
+                );
 
         return http.build();
     }
