@@ -30,7 +30,7 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests(requests -> requests
                         .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
-                        .requestMatchers("/api/users/inscription").permitAll()
+                        .requestMatchers("/users/inscription").permitAll()
                         .requestMatchers("/inscription").permitAll()
                         .requestMatchers("/welcome").permitAll()
                         .anyRequest().authenticated())

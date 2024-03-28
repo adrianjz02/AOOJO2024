@@ -8,7 +8,7 @@
 
 <body>
     <h1>Inscription</h1>
-    <form action="/api/users/register" method="post" id="register-form">
+    <form action="/api/users/register" method="post" id="inscription">
         <div>
             <label for="username">Nom d'utilisateur :</label>
             <input type="text" id="username" name="username" required>
@@ -26,7 +26,7 @@
         </div>
     </form>
     <script>
-        document.getElementById('register-form').addEventListener('submit', function (event) {
+        document.getElementById('inscription').addEventListener('submit', function (event) {
             event.preventDefault();
             const formData = new FormData(event.target);
             fetch(event.target.action, {
