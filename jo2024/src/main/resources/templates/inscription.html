@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <title>Inscription</title>
 </head>
+
 <body>
     <h1>Inscription</h1>
-    <form id="register-form">
+    <form action="/api/users/register" method="post" id="register-form">
         <div>
             <label for="username">Nom d'utilisateur :</label>
             <input type="text" id="username" name="username" required>
@@ -24,18 +26,12 @@
         </div>
     </form>
     <script>
-        document.getElementById('register-form').addEventListener('submit', function(event) {
+        document.getElementById('register-form').addEventListener('submit', function (event) {
             event.preventDefault();
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            const email = document.getElementById('email').value;
-            const user = { username, password, email };
-            fetch('/api/users/register', {
+            const formData = new FormData(event.target);
+            fetch(event.target.action, {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(user)
+                body: formData
             }).then(response => {
                 if (response.ok) {
                     alert('Inscription réussie !');
@@ -46,4 +42,5 @@
         });
     </script>
 </body>
+
 </html>

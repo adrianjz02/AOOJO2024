@@ -30,10 +30,9 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests(requests -> requests
                         .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
-                        .requestMatchers("/users/register").permitAll()
+                        .requestMatchers("/api/users/inscription").permitAll()
                         .requestMatchers("/inscription").permitAll()
                         .requestMatchers("/welcome").permitAll()
-                        .requestMatchers("/users").permitAll() // Permet l'accès à /users sans authentification
                         .anyRequest().authenticated())
                 .formLogin(Customizer.withDefaults());
 
