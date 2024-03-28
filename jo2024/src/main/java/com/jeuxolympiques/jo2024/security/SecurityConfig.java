@@ -31,7 +31,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(requests -> requests
                         .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
                         .requestMatchers("/users/register").permitAll()
-                        .requestMatchers("/register").permitAll()
+                        .requestMatchers("/inscription").permitAll()
                         .requestMatchers("/welcome").permitAll()
                         .requestMatchers("/users").permitAll() // Permet l'accès à /users sans authentification
                         .anyRequest().authenticated())
