@@ -24,4 +24,6 @@ public class UserApiController {
         User createdUser = userService.saveUser(user);
         return ResponseEntity.ok(createdUser);
     }
+
 }
+ 
