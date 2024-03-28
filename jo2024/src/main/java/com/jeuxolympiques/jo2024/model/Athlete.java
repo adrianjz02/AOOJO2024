@@ -1,16 +1,10 @@
 package com.jeuxolympiques.jo2024.model;
 
-import java.util.List;
-import java.util.Map;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.MapKeyColumn;
-import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
-import jakarta.persistence.ElementCollection;
 import jakarta.validation.constraints.NotBlank;
 
 @Entity
@@ -26,21 +20,14 @@ public class Athlete {
     @Column
     private String biographie;
 
-    @ElementCollection
-    @CollectionTable(name = "realisations")
-    private List<String> réalisations;
+    @Column
+    private String réalisations;
 
-    @ElementCollection
-    @CollectionTable(name = "competences")
-    private List<String> compétences;
+    @Column
+    private String compétences;
 
-    @ElementCollection
-    @CollectionTable(name = "reseaux_sociaux")
-    @MapKeyColumn(name = "reseau")
-    @Column(name = "lien")
-    private Map<String, String> réseauxSociaux;
-
-    // Getters and Setters
+    @Column
+    private String réseauxSociaux;
 
     public Long getId() {
         return id;
@@ -66,27 +53,29 @@ public class Athlete {
         this.biographie = biographie;
     }
 
-    public List<String> getRéalisations() {
+    public String getRéalisations() {
         return réalisations;
     }
 
-    public void setRéalisations(List<String> réalisations) {
+    public void setRéalisations(String réalisations) {
         this.réalisations = réalisations;
     }
 
-    public List<String> getCompétences() {
+    public String getCompétences() {
         return compétences;
     }
 
-    public void setCompétences(List<String> compétences) {
+    public void setCompétences(String compétences) {
         this.compétences = compétences;
     }
 
-    public Map<String, String> getRéseauxSociaux() {
+    public String getRéseauxSociaux() {
         return réseauxSociaux;
     }
 
-    public void setRéseauxSociaux(Map<String, String> réseauxSociaux) {
+    public void setRéseauxSociaux(String réseauxSociaux) {
         this.réseauxSociaux = réseauxSociaux;
     }
+
+   
 }
