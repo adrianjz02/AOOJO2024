@@ -3,13 +3,69 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>JO2024</title>
+    <title>Accueil JO2024</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+            font-family: Arial, sans-serif;
+        }
+        h2 {
+            color: green;
+        }
+    </style>
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        window.addEventListener('DOMContentLoaded', (event) => {
+            var alertLogin = document.getElementById("alert-login");
+            var alertLogout = document.getElementById("alert-logout");
+
+            var authenticated = /*[[${authenticated}]]*/ false;
+
+            var urlParams = new URLSearchParams(window.location.search);
+            var loginSuccess = urlParams.has('loginSuccess');
+            var logoutSuccess = urlParams.has('logoutSuccess');
+
+            if (loginSuccess && authenticated) {
+                alertLogin.style.display = "block"; // Afficher l'alerte de connexion réussie
+                setTimeout(function() {
+                    alertLogin.style.display = "none"; // Masquer l'alerte après 5 secondes
+                }, 5000);
+            } else if (logoutSuccess && !authenticated) {
+                alertLogout.style.display = "block"; // Afficher l'alerte de déconnexion réussie
+                setTimeout(function() {
+                    alertLogout.style.display = "none"; // Masquer l'alerte après 5 secondes
+                }, 5000);
+            }
+        });
+        /*]]>*/
+    </script>   
 </head>
 
 <body>
+    <div id="alert-login" style="display: none";>
+        <h2>Connexion réussie!</h2>
+        <p>Votre connexion a été établie avec succès.</p>
+    </div>
+    <div id="alert-logout"style="display: none";>
+        <h2>Déconnexion réussie!</h2>
+        <p>Vous avez été déconnecté avec succès.</p>
+    </div>
+
     <h1>Welcome to JO2024</h1>
-    <a th:href="@{/inscription}" class="btn btn-primary">S'inscrire</a>
-    <a th:href="@{/connexion}" class="btn btn-primary">Se connecter</a>
+    <!-- Si l'utilisateur est connecté -->
+    <div th:if="${authenticated}">
+        <a th:href="@{/logout}" button class="btn btn-primary">Se déconnecter</a>
+    </div>
+
+    <!-- Si l'utilisateur n'est pas connecté -->
+    <div th:unless="${authenticated}">
+        <a th:href="@{/inscription}" class="btn btn-primary">S'inscrire</a>
+        <a th:href="@{/login}" class="btn btn-primary">Se connecter</a>
+    </div>
+
+
+    </div>
 </body>
 
 </html>

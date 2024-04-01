@@ -1,13 +1,20 @@
 package com.jeuxolympiques.jo2024.controller.web;
 
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.view.RedirectView;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 
 import com.jeuxolympiques.jo2024.model.User;
@@ -16,9 +23,9 @@ import com.jeuxolympiques.jo2024.service.UserService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 @Controller
 @AllArgsConstructor
+@Slf4j
 public class UserController {
     private UserService userService;
     private AuthenticationManager authenticationManager;    
@@ -26,51 +33,38 @@ public class UserController {
     @GetMapping("/inscription")
     public String showRegistrationForm() {
         log.info("Affichage du formulaire d'inscription");
-        return "inscription"; // Cela renvoie le nom de la vue, Spring résoudra la vue avec ce nom.
+        return "inscription";
     }
 
     @PostMapping("/inscription")
     public String registration(@ModelAttribute User user) {
-        // Traitez les données du formulaire ici
         userService.saveUser(user);
-        log.info("Inscription de l'utilisateur : {}", user.getName(), "Redirection vers la page d'accueil");
-        
-        // Redirigez l'utilisateur vers une page de confirmation ou d'accueil
-        return "accueil";
+        log.info("L'utilisateur : {}", user.getName(), "a bien été inscrit !!");
+        return "redirect:/accueil";
     }
 
-    @GetMapping("/connexion")
+    @GetMapping("/login")
     public String showLoginForm() {
         log.info("Affichage du formulaire de connexion");
-        return "connexion"; // Cela renvoie le nom de la vue, Spring résoudra la vue avec ce nom.
+        return "login";
     }
 
-     
-    @PostMapping("/connexion")
-    public String connexion(@ModelAttribute User user) {
-        log.info("Tentative de connexion pour l'utilisateur : {}", user.getEmail());
+    // @PostMapping("/login")
+    // public String login(@ModelAttribute User user, Model model) {
+    //     log.info("Tentative de connexion pour l'utilisateur : {}", user.getEmail());
 
-        try {
-            // Authentifier l'utilisateur
-            Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(user.getEmail(), user.getPassword())
-            );
+    //     try {
+    //         Authentication authentication = authenticationManager.authenticate(
+    //             new UsernamePasswordAuthenticationToken(user.getEmail(), user.getPassword())
+    //         );
             
-            // Mettre à jour le contexte de sécurité
-            SecurityContextHolder.getContext().setAuthentication(authentication);
-
-            log.info("Connexion réussie pour l'utilisateur : {}", user.getEmail());
+    //         SecurityContextHolder.getContext().setAuthentication(authentication);
+    //         model.addAttribute("loginSuccess", true);        
+    //         return "redirect:/accueil"; // Redirection vers la page d'accueil
+    //     } catch (AuthenticationException e) {
+    //         log.error("Échec de la connexion pour l'utilisateur : {}", user.getEmail(), e);
             
-            // Rediriger l'utilisateur vers la page de succès
-            return "success";
-        } catch (AuthenticationException e) {
-            // L'authentification a échoué
-            log.error("Échec de la connexion pour l'utilisateur : {}", user.getEmail(), e);
-            
-            // Rediriger l'utilisateur vers la page de connexion avec un message d'erreur
-            return "connexion?error";
-        }
-    }
-     
-
+    //         return "redirect:/login?error";
+    //     }
+    // }
 }

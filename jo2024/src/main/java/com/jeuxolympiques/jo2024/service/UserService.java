@@ -22,7 +22,7 @@ public class UserService implements UserDetailsService {
     private PasswordEncoder passwordEncoder;
 
     public void saveUser(User user) {
-        log.info("Tentative d'enregistrement de l'utilisateur : {} ...", user);
+        log.info("Processus d'enregistrement de l'utilisateur : {} ...", user);
 
         if (!user.getEmail().contains("@") || !user.getEmail().contains(".")) {
             log.error("Votre email est invalide, veuillez réessayer !", user.getEmail());
@@ -47,7 +47,6 @@ public class UserService implements UserDetailsService {
                 log.error("Aucun utilisateur ne correspond à cet email : {}", email);
                 return new UsernameNotFoundException("Aucun utilisateur ne correspond à cet email : " + email);
             });
-            log.info("Utilisateur chargé avec succès : {}", user);
         return user;
     }
     
