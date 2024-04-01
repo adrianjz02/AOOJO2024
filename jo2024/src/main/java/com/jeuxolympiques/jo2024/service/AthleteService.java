@@ -8,5 +8,8 @@ public interface AthleteService {
     Athlete getAthleteById(long id);
 
     List<Athlete> getAllAthletes();
+
+    Athlete saveAthlete(Athlete athlete);
+
     // Autres méthodes nécessaires
 }

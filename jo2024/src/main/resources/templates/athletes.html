@@ -1,23 +1,42 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
 <head>
     <title>Liste des athlètes</title>
 </head>
+
 <body>
     <h1>Liste des athlètes</h1>
+    <a th:href="@{/accueil}">Accueil</a>
     <table>
         <thead>
             <tr>
+                <th>Photo</th>
                 <th>Prénom</th>
                 <th>Nom</th>
+                <th>Biographie</th>
+                <th>Réalisation</th>
+                <th>Compétences particulières</th>
+                <th>Réseaux sociaux</th>
             </tr>
         </thead>
         <tbody>
             <tr th:each="athlete : ${athletes}">
+                <td><img th:src="${athlete.photo}" width="50" height="30" /></td>
                 <td th:text="${athlete.firstName}"></td>
                 <td th:text="${athlete.lastName}"></td>
+                <td th:text="${athlete.biography}"></td>
+                <td th:text="${athlete.achievements}"></td>
+                <td th:text="${athlete.skills}"></td>
+                <td th:text="${athlete.socialMedia}"></td>
+
             </tr>
         </tbody>
     </table>
+
+    <div sec:authorize="hasRole('ADMIN')">
+        <a th:href="@{/athletes/add}">Ajouter un athlète</a>
+    </div>
 </body>
+
 </html>

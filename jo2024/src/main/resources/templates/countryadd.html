@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Ajouter un athlète</title>
+</head>
+
+<body>
+    <h1>Ajouter un athlète</h1>
+    <a th:href="@{/countries}" class="btn btn-primary">Voir les pays</a>
+
+    <form method="post" th:action="@{/countries/add}" enctype="multipart/form-data">
+
+        <label for="name">Nom du pays :</label><br>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="flag">URL du drapeau :</label><br>
+        <input type="text" id="flag" name="flag" required><br>
+
+        <label for="capital">Capitale :</label><br>
+        <input type="text" id="capital" name="capital" required><br>
+
+        <label for="population">Population :</label><br>
+        <input type="number" id="population" name="population" required><br>
+
+        <label for="interestingFacts">Faits intéressants :</label><br>
+        <textarea id="interestingFacts" name="interestingFacts" rows="4" cols="50" required></textarea><br>
+
+        <input type="submit" value="Ajouter le pays">
+    </form>
+</body>
+
+</html>

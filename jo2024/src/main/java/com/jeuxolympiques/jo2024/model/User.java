@@ -1,11 +1,14 @@
 package com.jeuxolympiques.jo2024.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -44,15 +47,26 @@ public class User implements UserDetails {
     @NotBlank(message = "Name is required")
     private String name;
 
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private Role role = Role.USER;
+
+    // Constructeur pour créer un utilisateur avec le rôle USER par défaut
+    public User(String email, String password, String name) {
+        this.email = email;
+        this.password = password;
+        this.name = name;
+        this.role = Role.USER;
+    }
+
     @Override
     public String toString() {
         return "User [id=" + id + ", email=" + email + ", name=" + name + "]";
     }
 
-    // Implémentation des méthodes de l'interface UserDetails
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        return List.of(() -> "ROLE_" + role.name());
     }
 
     @Override
@@ -83,7 +97,6 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
-    }    
+    }
 
-    
 }

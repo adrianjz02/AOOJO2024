@@ -97,56 +97,60 @@ public class SecurityConfig {
 @Slf4j
 public class SecurityConfig {
 
-    @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        return http
-        .csrf(AbstractHttpConfigurer::disable) // Désactive le CSRF
-            .authorizeHttpRequests(authorizeRequests -> authorizeRequests
-                .requestMatchers("/").authenticated()
-                .anyRequest().permitAll()
-            )
-            .formLogin(login -> login
-                .loginPage("/login")
-                .loginProcessingUrl("/login")
-                .defaultSuccessUrl("/accueil?loginSuccess=true") 
-                .permitAll())
-            .logout(logout -> logout
-                .logoutUrl("/logout")
-                .logoutSuccessHandler(logoutSuccessHandler()) // Ajoutez cette ligne
-                .permitAll())
-            .build();
-    }
+        @Bean
+        public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+                return http
+                                .csrf(AbstractHttpConfigurer::disable) // Désactive le CSRF
+                                .authorizeHttpRequests(authorizeRequests -> authorizeRequests
+                                                .requestMatchers("/").authenticated()
+                                                .anyRequest().permitAll())
+                                .formLogin(login -> login
+                                                .loginPage("/login")
+                                                .loginProcessingUrl("/login")
+                                                .defaultSuccessUrl("/accueil?loginSuccess=true")
+                                                .permitAll())
+                                .logout(logout -> logout
+                                                .logoutUrl("/logout")
+                                                .logoutSuccessHandler(logoutSuccessHandler()) // Ajoutez cette ligne
+                                                .permitAll())
+                                .build();
+        }
 
         @Bean
         public PasswordEncoder passwordEncoder() {
                 return new BCryptPasswordEncoder();
         }
+
         @Bean
-        public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
+        public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration)
+                        throws Exception {
                 return authenticationConfiguration.getAuthenticationManager();
         }
 
-        
-        
         // @Bean
-        // public AuthenticationProvider authenticationProvider(UserDetailsService userDetailsService) {
-        //         log.info("Processus d'authentification de l'utilisateur ...");
-        //         DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
-        //         daoAuthenticationProvider.setUserDetailsService(userDetailsService);
-        //         daoAuthenticationProvider.setPasswordEncoder(this.passwordEncoder());
-        //         return daoAuthenticationProvider;
+        // public AuthenticationProvider authenticationProvider(UserDetailsService
+        // userDetailsService) {
+        // log.info("Processus d'authentification de l'utilisateur ...");
+        // DaoAuthenticationProvider daoAuthenticationProvider = new
+        // DaoAuthenticationProvider();
+        // daoAuthenticationProvider.setUserDetailsService(userDetailsService);
+        // daoAuthenticationProvider.setPasswordEncoder(this.passwordEncoder());
+        // return daoAuthenticationProvider;
         // }
 
         @Bean
         public HttpStatusReturningLogoutSuccessHandler logoutSuccessHandler() {
-        return new HttpStatusReturningLogoutSuccessHandler() {
-        @Override
-        public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException {
-            log.info("La méthode onLogoutSuccess est appelée lors de la déconnexion.");
-            log.info("Déconnexion réussie pour l'utilisateur : {}", (authentication != null ? authentication.getName() : "Utilisateur inconnu"));
+                return new HttpStatusReturningLogoutSuccessHandler() {
+                        @Override
+                        public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response,
+                                        Authentication authentication) throws IOException {
+                                log.info("La méthode onLogoutSuccess est appelée lors de la déconnexion.");
+                                log.info("Déconnexion réussie pour l'utilisateur : {}",
+                                                (authentication != null ? authentication.getName()
+                                                                : "Utilisateur inconnu"));
 
-            response.sendRedirect("/accueil?logoutSuccess=true");
-        }
-    };
+                                response.sendRedirect("/accueil?logoutSuccess=true");
+                        }
+                };
         }
 }

@@ -1,13 +1,11 @@
 package com.jeuxolympiques.jo2024.service;
 
-import java.util.List;
-import java.util.Optional;
-
+import com.jeuxolympiques.jo2024.model.Athlete;
+import com.jeuxolympiques.jo2024.repository.AthleteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jeuxolympiques.jo2024.model.Athlete;
-import com.jeuxolympiques.jo2024.repository.AthleteRepository;
+import java.util.List;
 
 @Service
 public class AthleteServiceImpl implements AthleteService {
@@ -17,8 +15,7 @@ public class AthleteServiceImpl implements AthleteService {
 
     @Override
     public Athlete getAthleteById(long id) {
-        Optional<Athlete> athleteOptional = athleteRepository.findById(id);
-        return athleteOptional.orElse(null);
+        return athleteRepository.findById(id).orElse(null);
     }
 
     @Override
@@ -26,5 +23,10 @@ public class AthleteServiceImpl implements AthleteService {
         return athleteRepository.findAll();
     }
 
-    // Implémentez d'autres méthodes si nécessaire
+    @Override
+    public Athlete saveAthlete(Athlete athlete) {
+        return athleteRepository.save(athlete);
+    }
+
+    // Autres méthodes nécessaires
 }

@@ -14,14 +14,23 @@ public class Country {
 
     private String name;
 
-    private String code;
+    private String flag; // Ajout du drapeau
+
+    private String capital; // Ajout de la capitale
+
+    private Long population; // Ajout de la population
+
+    private String interestingFacts; // Ajout des faits intéressants
 
     public Country() {
     }
 
-    public Country(String name, String code) {
+    public Country(String name, String flag, String capital, Long population, String interestingFacts) {
         this.name = name;
-        this.code = code;
+        this.flag = flag;
+        this.capital = capital;
+        this.population = population;
+        this.interestingFacts = interestingFacts;
     }
 
     public Long getId() {
@@ -40,12 +49,35 @@ public class Country {
         this.name = name;
     }
 
-    public String getCode() {
-        return code;
+    public String getFlag() {
+        return flag;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+    public void setFlag(String flag) {
+        this.flag = flag;
+    }
+
+    public String getCapital() {
+        return capital;
+    }
+
+    public void setCapital(String capital) {
+        this.capital = capital;
+    }
+
+    public Long getPopulation() {
+        return population;
+    }
+
+    public void setPopulation(Long population) {
+        this.population = population;
+    }
+
+    public String getInterestingFacts() {
+        return interestingFacts;
+    }
+
+    public void setInterestingFacts(String interestingFacts) {
+        this.interestingFacts = interestingFacts;
     }
 }
-

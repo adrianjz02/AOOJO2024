@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Ajouter un athlète</title>
+</head>
+
+<body>
+    <h1>Ajouter un athlète</h1>
+    <a th:href="@{/athletes}" class="btn btn-primary">Voir les athlètes</a>
+    <form method="post" th:action="@{/athletes/add}" enctype="multipart/form-data">
+
+
+        <label for="firstName">Prénom : </label>
+        <input type="text" id="firstName" name="firstName" required><br>
+
+        <label for="lastName">Nom : </label>
+        <input type="text" id="lastName" name="lastName" required><br>
+
+        <label for="biography">Biographie : </label>
+        <textarea id="biography" name="biography" rows="4" cols="50" ></textarea><br>
+
+        <label for="achievements">Réalisation : </label>
+        <textarea id="achievements" name="achievements" rows="4" cols="50" ></textarea><br>
+
+        <label for="skills">Compétences particulières : </label>
+        <textarea id="skills" name="skills" rows="4" cols="50" ></textarea><br>
+
+        <label for="socialMedia">Réseaux sociaux : </label>
+        <input type="text" id="socialMedia" name="socialMedia" ><br>
+
+        <label for="photo">URL de la photo : </label>
+        <input type="text" id="photo" name="photo" required><br>
+
+        <button type="submit">Ajouter</button>
+    </form>
+</body>
+
+</html>
