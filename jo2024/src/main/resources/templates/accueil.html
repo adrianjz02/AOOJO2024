@@ -39,7 +39,7 @@
             }
         });
         /*]]>*/
-    </script>   
+    </script>
 </head>
 
 <body>
@@ -56,6 +56,8 @@
     <!-- Si l'utilisateur est connecté -->
     <div th:if="${authenticated}">
         <a th:href="@{/logout}" button class="btn btn-primary">Se déconnecter</a>
+        <a th:href="@{/athletes}" class="btn btn-primary">Voir les athlètes</a>
+        <a th:href="@{/countries}" class="btn btn-primary">Voir les pays</a>
     </div>
 
     <!-- Si l'utilisateur n'est pas connecté -->
@@ -64,8 +66,6 @@
         <a th:href="@{/login}" class="btn btn-primary">Se connecter</a>
     </div>
 
-
-    </div>
 </body>
 
 </html>

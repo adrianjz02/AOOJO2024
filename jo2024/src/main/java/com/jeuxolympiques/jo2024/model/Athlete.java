@@ -4,8 +4,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Column;
-import jakarta.validation.constraints.NotBlank;
 
 @Entity
 public class Athlete {
@@ -13,21 +11,17 @@ public class Athlete {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    @NotBlank(message = "Nom is required")
-    private String nom;
+    private String firstName;
 
-    @Column
-    private String biographie;
+    private String lastName;
 
-    @Column
-    private String réalisations;
+    public Athlete() {
+    }
 
-    @Column
-    private String compétences;
-
-    @Column
-    private String réseauxSociaux;
+    public Athlete(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 
     public Long getId() {
         return id;
@@ -37,45 +31,19 @@ public class Athlete {
         this.id = id;
     }
 
-    public String getNom() {
-        return nom;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getBiographie() {
-        return biographie;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setBiographie(String biographie) {
-        this.biographie = biographie;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
-
-    public String getRéalisations() {
-        return réalisations;
-    }
-
-    public void setRéalisations(String réalisations) {
-        this.réalisations = réalisations;
-    }
-
-    public String getCompétences() {
-        return compétences;
-    }
-
-    public void setCompétences(String compétences) {
-        this.compétences = compétences;
-    }
-
-    public String getRéseauxSociaux() {
-        return réseauxSociaux;
-    }
-
-    public void setRéseauxSociaux(String réseauxSociaux) {
-        this.réseauxSociaux = réseauxSociaux;
-    }
-
-   
 }

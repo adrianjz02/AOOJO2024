@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Liste des pays participants</title>
+</head>
+<body>
+    <h1>Liste des pays participants aux JO24</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Code</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="country : ${countries}">
+                <td th:text="${country.name}"></td>
+                <td th:text="${country.code}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
