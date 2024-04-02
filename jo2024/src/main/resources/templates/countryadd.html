@@ -2,11 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title>Ajouter un athlète</title>
+    <title>Ajouter un pays</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/countriesadd.css}">
 </head>
 
+
 <body>
-    <h1>Ajouter un athlète</h1>
+    <h1>Ajouter un pays</h1>
     <a th:href="@{/countries}" class="btn btn-primary">Voir les pays</a>
 
     <form method="post" th:action="@{/countries/add}" enctype="multipart/form-data">
