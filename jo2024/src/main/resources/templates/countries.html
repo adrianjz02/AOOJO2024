@@ -12,8 +12,8 @@
     <table>
         <thead>
             <tr>
-                <th>Nom</th>
                 <th>Drapeau</th>
+                <th>Nom</th>
                 <th>Capitale</th>
                 <th>Population</th>
                 <th>Faits intéressants</th>
@@ -22,8 +22,8 @@
         </thead>
         <tbody>
             <tr th:each="country : ${countries}">
-                <td th:text="${country.countryName}"></td>
                 <td><img th:src="${country.flag}" width="50" height="30" /></td>
+                <td th:text="${country.countryName}"></td>
                 <td th:text="${country.capital}"></td>
                 <td th:text="${country.population}"></td>
                 <td th:text="${country.relevantPoint}"></td>
