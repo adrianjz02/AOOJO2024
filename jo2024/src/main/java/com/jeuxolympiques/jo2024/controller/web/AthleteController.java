@@ -16,6 +16,7 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -49,6 +50,13 @@ public class AthleteController {
 
         athleteRepository.save(athlete);
         return "redirect:/athletes";
+    }
+
+    @GetMapping("/{id}")
+    public String getAthleteProfile(@PathVariable Long id, Model model) {
+        Athlete athlete = athleteRepository.findById(id).orElseThrow(() -> new RuntimeException("Athlete not found with id " + id));
+        model.addAttribute("athlete", athlete);
+        return "athlete-profile";
     }
 
 }
