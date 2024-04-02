@@ -23183,3 +23183,288 @@ org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property o
 21:10:09.044 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
 21:10:09.044 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /error
 21:10:09.052 [http-nio-8080-exec-8] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1851/0x0000000801724930@17df7843]]]
+21:40:02.803 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+21:40:02.845 [restartedMain] INFO  c.j.jo2024.Jo2024Application - Starting Jo2024Application using Java 17.0.2 with PID 18356 (C:\Users\angel\.vscode\L3 AOO\AOOJO2024\jo2024\target\classes started by angel in C:\Users\angel\.vscode\L3 AOO\AOOJO2024\jo2024)
+21:40:02.847 [restartedMain] INFO  c.j.jo2024.Jo2024Application - No active profile set, falling back to 1 default profile: "default"
+21:40:02.909 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+21:40:02.910 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+21:40:03.819 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+21:40:03.900 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 3 JPA repository interfaces.
+21:40:05.031 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+21:40:05.045 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+21:40:05.049 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:40:05.050 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+21:40:05.138 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:40:05.140 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2227 ms
+21:40:05.194 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+21:40:05.697 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b249f24
+21:40:05.699 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+21:40:05.708 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/aoojo2024'
+21:40:05.922 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+21:40:06.036 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.0.CR1
+21:40:06.111 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+21:40:06.429 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+21:40:07.301 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+21:40:07.345 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+21:40:07.826 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21:40:08.206 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@e7bf300, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d1f7d20, org.springframework.security.web.context.SecurityContextHolderFilter@4ed1f08c, org.springframework.security.web.header.HeaderWriterFilter@1ce25830, org.springframework.web.filter.CorsFilter@6e9a1fb1, org.springframework.security.web.authentication.logout.LogoutFilter@386a2039, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@53b5c7f4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2dc15c5c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1fb9e367, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d028900, org.springframework.security.web.access.ExceptionTranslationFilter@17e3b864, org.springframework.security.web.access.intercept.AuthorizationFilter@4f1ec4d8]
+21:40:08.505 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+21:40:08.515 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+21:40:08.534 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+21:40:08.542 [restartedMain] INFO  c.j.jo2024.Jo2024Application - Started Jo2024Application in 6.107 seconds (process running for 6.783)
+21:41:38.644 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:41:38.645 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+21:41:38.648 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+21:41:38.691 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /accueil
+21:41:38.709 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /accueil
+21:41:38.754 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+21:41:38.755 [http-nio-8080-exec-1] INFO  c.j.j.controller.web.ControllerTest - Bienvenue dans la page d'accueil
+21:41:39.320 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /accueil.css
+21:41:39.324 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /accueil.css
+21:41:39.359 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+21:41:39.424 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /favicon.ico
+21:41:39.425 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /favicon.ico
+21:41:39.433 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+21:41:39.454 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /error
+21:41:39.456 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /error
+21:41:39.558 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+21:41:41.091 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+21:41:41.092 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+21:41:41.096 [http-nio-8080-exec-4] INFO  c.j.j.controller.web.UserController - Affichage du formulaire de connexion
+21:41:41.124 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+21:41:47.296 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing POST /login
+21:41:47.491 [http-nio-8080-exec-5] INFO  c.j.jo2024.service.UserService - Tentative de chargement de l'utilisateur avec l'email : a@a.a
+21:41:48.020 [http-nio-8080-exec-5] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+21:41:48.121 [http-nio-8080-exec-5] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1725/0x0000000801496900@4ec120c6]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@7a29a14a]
+21:41:48.121 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.UsernamePasswordAuthenticationFilter - Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1725/0x0000000801496900@4ec120c6]]
+21:41:48.129 [http-nio-8080-exec-5] INFO  c.j.j.E.S.AuthenticationSuccessListener - Connexion réussie pour l'utilisateur : a@a.a
+21:41:48.130 [http-nio-8080-exec-5] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to /accueil?loginSuccess=true
+21:41:48.146 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /accueil?loginSuccess=true
+21:41:48.152 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /accueil?loginSuccess=true
+21:41:48.155 [http-nio-8080-exec-6] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1725/0x0000000801496900@4ec120c6]]]
+21:41:48.155 [http-nio-8080-exec-6] INFO  c.j.j.controller.web.ControllerTest - Bienvenue dans la page d'accueil
+21:41:48.186 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /accueil.css
+21:41:48.189 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /accueil.css
+21:41:48.197 [http-nio-8080-exec-7] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1725/0x0000000801496900@4ec120c6]]]
+21:41:50.760 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /athletes
+21:41:50.760 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /athletes
+21:41:50.906 [http-nio-8080-exec-3] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1725/0x0000000801496900@4ec120c6]]]
+21:41:50.971 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /athlete.css
+21:41:50.975 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /athlete.css
+21:41:50.983 [http-nio-8080-exec-9] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1725/0x0000000801496900@4ec120c6]]]
+21:43:04.424 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /accueil
+21:43:04.425 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /accueil
+21:43:04.426 [http-nio-8080-exec-2] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1725/0x0000000801496900@4ec120c6]]]
+21:43:04.427 [http-nio-8080-exec-2] INFO  c.j.j.controller.web.ControllerTest - Bienvenue dans la page d'accueil
+21:43:04.497 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /accueil.css
+21:43:04.497 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /accueil.css
+21:43:04.502 [http-nio-8080-exec-8] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1725/0x0000000801496900@4ec120c6]]]
+21:45:44.459 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /showMap
+21:45:44.460 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /showMap
+21:45:44.468 [http-nio-8080-exec-6] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1725/0x0000000801496900@4ec120c6]]]
+21:58:49.163 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+21:58:49.211 [restartedMain] INFO  c.j.jo2024.Jo2024Application - Starting Jo2024Application using Java 17.0.2 with PID 18252 (C:\Users\angel\.vscode\L3 AOO\AOOJO2024\jo2024\target\classes started by angel in C:\Users\angel\.vscode\L3 AOO\AOOJO2024\jo2024)
+21:58:49.212 [restartedMain] INFO  c.j.jo2024.Jo2024Application - No active profile set, falling back to 1 default profile: "default"
+21:58:49.301 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+21:58:49.302 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+21:58:50.002 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+21:58:50.063 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 4 JPA repository interfaces.
+21:58:50.828 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+21:58:50.851 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+21:58:50.855 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:58:50.855 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+21:58:50.911 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:58:50.912 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1609 ms
+21:58:50.963 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+21:58:51.300 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@dd93f87
+21:58:51.302 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+21:58:51.308 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/aoojo2024'
+21:58:51.581 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+21:58:51.728 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.0.CR1
+21:58:51.787 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+21:58:51.963 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+21:58:52.676 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+21:58:52.732 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+21:58:53.217 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+21:58:53.782 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@e134d0a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@605ac70d, org.springframework.security.web.context.SecurityContextHolderFilter@5ee77c4c, org.springframework.security.web.header.HeaderWriterFilter@7cb90603, org.springframework.web.filter.CorsFilter@53d87161, org.springframework.security.web.authentication.logout.LogoutFilter@ccd65f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3b94eb23, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fe43956, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@17d62bf2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52174469, org.springframework.security.web.access.ExceptionTranslationFilter@1a7a74a6, org.springframework.security.web.access.intercept.AuthorizationFilter@27fe208b]
+21:58:54.132 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+21:58:54.146 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+21:58:54.161 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+21:58:54.169 [restartedMain] INFO  c.j.jo2024.Jo2024Application - Started Jo2024Application in 5.244 seconds (process running for 5.639)
+21:58:58.628 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:58:58.629 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+21:58:58.630 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+21:58:58.652 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /showMap
+21:58:58.691 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /showMap
+21:58:58.896 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+21:59:10.580 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /markers
+21:59:10.581 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /markers
+21:59:10.728 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+22:00:46.294 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing POST /markers
+22:00:46.301 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured POST /markers
+22:00:46.358 [http-nio-8080-exec-5] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: S0022
+22:00:46.359 [http-nio-8080-exec-5] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Column 'id' not found.
+22:00:46.379 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+22:00:46.385 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /markers
+22:00:46.386 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /markers
+22:00:46.400 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+22:15:27.466 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+22:15:27.510 [restartedMain] INFO  c.j.jo2024.Jo2024Application - Starting Jo2024Application using Java 17.0.2 with PID 12516 (C:\Users\angel\.vscode\L3 AOO\AOOJO2024\jo2024\target\classes started by angel in C:\Users\angel\.vscode\L3 AOO\AOOJO2024\jo2024)
+22:15:27.512 [restartedMain] INFO  c.j.jo2024.Jo2024Application - No active profile set, falling back to 1 default profile: "default"
+22:15:27.560 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+22:15:27.561 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+22:15:28.326 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22:15:28.398 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 4 JPA repository interfaces.
+22:15:29.052 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+22:15:29.064 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+22:15:29.066 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+22:15:29.066 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+22:15:29.111 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+22:15:29.112 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1549 ms
+22:15:29.164 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+22:15:29.496 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d398b7d
+22:15:29.498 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+22:15:29.506 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/aoojo2024'
+22:15:29.699 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+22:15:29.880 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.0.CR1
+22:15:29.948 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22:15:30.132 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+22:15:31.017 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+22:15:31.050 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22:15:31.750 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+22:15:32.247 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3f296981, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6f53f0a9, org.springframework.security.web.context.SecurityContextHolderFilter@1717f47c, org.springframework.security.web.header.HeaderWriterFilter@4ca8815a, org.springframework.web.filter.CorsFilter@3262f119, org.springframework.security.web.authentication.logout.LogoutFilter@18ba3e96, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@183ca94a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5c1fc0cb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5de26869, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6766e87d, org.springframework.security.web.access.ExceptionTranslationFilter@5fbd4ac9, org.springframework.security.web.access.intercept.AuthorizationFilter@71b0f120]
+22:15:32.524 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+22:15:32.541 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+22:15:32.561 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+22:15:32.576 [restartedMain] INFO  c.j.jo2024.Jo2024Application - Started Jo2024Application in 5.335 seconds (process running for 5.746)
+22:15:34.591 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:15:34.591 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+22:15:34.592 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+22:15:34.611 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /markers
+22:15:34.622 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /markers
+22:15:34.826 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+22:16:28.475 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+22:16:28.479 [Thread-5] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+22:16:28.492 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+22:16:28.500 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+22:16:28.526 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+22:16:28.631 [restartedMain] INFO  c.j.jo2024.Jo2024Application - Starting Jo2024Application using Java 17.0.2 with PID 12516 (C:\Users\angel\.vscode\L3 AOO\AOOJO2024\jo2024\target\classes started by angel in C:\Users\angel\.vscode\L3 AOO\AOOJO2024\jo2024)
+22:16:28.632 [restartedMain] INFO  c.j.jo2024.Jo2024Application - No active profile set, falling back to 1 default profile: "default"
+22:16:28.887 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22:16:28.912 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 4 JPA repository interfaces.
+22:16:29.067 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+22:16:29.069 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+22:16:29.070 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+22:16:29.071 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+22:16:29.089 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+22:16:29.089 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 455 ms
+22:16:29.103 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+22:16:29.147 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@14bf749
+22:16:29.148 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+22:16:29.149 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/aoojo2024'
+22:16:29.225 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+22:16:29.228 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22:16:29.235 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+22:16:29.398 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+22:16:29.409 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22:16:29.575 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+22:16:29.666 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@33555171, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62ab6d30, org.springframework.security.web.context.SecurityContextHolderFilter@2de8be7f, org.springframework.security.web.header.HeaderWriterFilter@4bbac2d6, org.springframework.web.filter.CorsFilter@76ded5cd, org.springframework.security.web.authentication.logout.LogoutFilter@5fb72f67, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@557f80ae, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2ac66d42, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2af5bf5c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5f0d4148, org.springframework.security.web.access.ExceptionTranslationFilter@13127422, org.springframework.security.web.access.intercept.AuthorizationFilter@410aad6d]
+22:16:29.730 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+22:16:29.736 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+22:16:29.741 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+22:16:29.744 [restartedMain] INFO  c.j.jo2024.Jo2024Application - Started Jo2024Application in 1.161 seconds (process running for 62.915)
+22:16:29.747 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+22:16:41.482 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:16:41.484 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+22:16:41.486 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+22:16:41.488 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /markers
+22:16:41.488 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /markers
+22:16:41.638 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+22:17:00.185 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /markers?latitude=11&longitude=212&label=DZAOKA
+22:17:00.197 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /markers?latitude=11&longitude=212&label=DZAOKA
+22:17:00.236 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+22:17:42.086 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /markers?latitude=11&longitude=212&label=DZAOKA
+22:17:42.087 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /markers?latitude=11&longitude=212&label=DZAOKA
+22:17:42.098 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+22:17:43.111 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /markers?latitude=11&longitude=212&label=DZAOKA
+22:17:43.113 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /markers?latitude=11&longitude=212&label=DZAOKA
+22:17:43.124 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+22:17:48.844 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /markers
+22:17:48.845 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /markers
+22:17:48.857 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+22:17:50.007 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /markers
+22:17:50.007 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /markers
+22:17:50.020 [http-nio-8080-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+22:17:50.653 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /showMap
+22:17:50.655 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /showMap
+22:17:50.689 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+22:17:53.825 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /markers
+22:17:53.826 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /markers
+22:17:53.837 [http-nio-8080-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+22:23:26.745 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+22:23:26.796 [restartedMain] INFO  c.j.jo2024.Jo2024Application - Starting Jo2024Application using Java 17.0.2 with PID 1004 (C:\Users\angel\.vscode\L3 AOO\AOOJO2024\jo2024\target\classes started by angel in C:\Users\angel\.vscode\L3 AOO\AOOJO2024\jo2024)
+22:23:26.799 [restartedMain] INFO  c.j.jo2024.Jo2024Application - No active profile set, falling back to 1 default profile: "default"
+22:23:26.856 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+22:23:26.856 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+22:23:27.494 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+22:23:27.553 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+22:23:28.379 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+22:23:28.404 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+22:23:28.412 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+22:23:28.413 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+22:23:28.510 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+22:23:28.514 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1653 ms
+22:23:28.573 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+22:23:29.006 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b249f24
+22:23:29.008 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+22:23:29.014 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/aoojo2024'
+22:23:29.191 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+22:23:29.321 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.0.CR1
+22:23:29.452 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+22:23:29.703 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+22:23:30.596 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+22:23:30.645 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+22:23:31.323 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+22:23:31.708 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@e7bf300, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d1f7d20, org.springframework.security.web.context.SecurityContextHolderFilter@4ed1f08c, org.springframework.security.web.header.HeaderWriterFilter@1ce25830, org.springframework.web.filter.CorsFilter@6e9a1fb1, org.springframework.security.web.authentication.logout.LogoutFilter@386a2039, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@53b5c7f4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2dc15c5c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1fb9e367, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d028900, org.springframework.security.web.access.ExceptionTranslationFilter@17e3b864, org.springframework.security.web.access.intercept.AuthorizationFilter@4f1ec4d8]
+22:23:31.950 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+22:23:31.961 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+22:23:31.978 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+22:23:31.989 [restartedMain] INFO  c.j.jo2024.Jo2024Application - Started Jo2024Application in 5.469 seconds (process running for 5.914)
+22:23:44.676 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+22:23:44.676 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+22:23:44.680 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+22:23:44.714 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /accueil
+22:23:44.729 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /accueil
+22:23:44.768 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+22:23:44.769 [http-nio-8080-exec-1] INFO  c.j.j.controller.web.ControllerTest - Bienvenue dans la page d'accueil
+22:23:45.286 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /accueil.css
+22:23:45.288 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /accueil.css
+22:23:45.302 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+22:23:46.820 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+22:23:46.821 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+22:23:46.824 [http-nio-8080-exec-4] INFO  c.j.j.controller.web.UserController - Affichage du formulaire de connexion
+22:23:46.833 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+22:23:52.004 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing POST /login
+22:23:52.195 [http-nio-8080-exec-8] INFO  c.j.jo2024.service.UserService - Tentative de chargement de l'utilisateur avec l'email : a@a.a
+22:23:52.632 [http-nio-8080-exec-8] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+22:23:52.729 [http-nio-8080-exec-8] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1718/0x00000008014d95e8@6e387c95]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@36e8b8c2]
+22:23:52.732 [http-nio-8080-exec-8] DEBUG o.s.s.w.a.UsernamePasswordAuthenticationFilter - Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1718/0x00000008014d95e8@6e387c95]]
+22:23:52.733 [http-nio-8080-exec-8] INFO  c.j.j.E.S.AuthenticationSuccessListener - Connexion réussie pour l'utilisateur : a@a.a
+22:23:52.734 [http-nio-8080-exec-8] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to /accueil?loginSuccess=true
+22:23:52.741 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /accueil?loginSuccess=true
+22:23:52.744 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /accueil?loginSuccess=true
+22:23:52.746 [http-nio-8080-exec-5] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1718/0x00000008014d95e8@6e387c95]]]
+22:23:52.747 [http-nio-8080-exec-5] INFO  c.j.j.controller.web.ControllerTest - Bienvenue dans la page d'accueil
+22:23:52.785 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /accueil.css
+22:23:52.786 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /accueil.css
+22:23:52.793 [http-nio-8080-exec-6] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1718/0x00000008014d95e8@6e387c95]]]
+22:23:54.343 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /showMap
+22:23:54.345 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /showMap
+22:23:54.354 [http-nio-8080-exec-7] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1718/0x00000008014d95e8@6e387c95]]]
+22:23:57.011 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /accueil?loginSuccess=true
+22:23:57.017 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /accueil?loginSuccess=true
+22:23:57.023 [http-nio-8080-exec-3] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1718/0x00000008014d95e8@6e387c95]]]
+22:23:57.024 [http-nio-8080-exec-3] INFO  c.j.j.controller.web.ControllerTest - Bienvenue dans la page d'accueil
+22:23:57.057 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /accueil.css
+22:23:57.059 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /accueil.css
+22:23:57.064 [http-nio-8080-exec-9] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1718/0x00000008014d95e8@6e387c95]]]
