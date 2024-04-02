@@ -54,7 +54,10 @@ public class AthleteController {
 
     @GetMapping("/{id}")
     public String getAthleteProfile(@PathVariable Long id, Model model) {
-        Athlete athlete = athleteRepository.findById(id).orElseThrow(() -> new RuntimeException("Athlete not found with id " + id));
+        Athlete athlete = athleteRepository.findById(id).orElse(null);
+        if (athlete == null) {
+            return "athlete-404";
+        }
         model.addAttribute("athlete", athlete);
         return "athlete-profile";
     }

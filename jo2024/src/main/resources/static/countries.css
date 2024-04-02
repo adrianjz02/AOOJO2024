@@ -5,15 +5,6 @@ body {
     background-color: #f4f4f4;
 }
 
-a {
-    color: #0066cc;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
 h1 {
     background-color: #333;
     color: #fff;
@@ -22,14 +13,16 @@ h1 {
 }
 
 table {
-    width: 100%;
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-th,
-td {
-    padding: 15px;
+th, td {
+    padding: 10px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
@@ -47,7 +40,20 @@ img {
     border-radius: 5px;
 }
 
-.btn-add {
+a {
+    color: #0066cc;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.add-country {
     display: block;
     background-color: #0066cc;
     color: #fff;
@@ -58,6 +64,6 @@ img {
     border-radius: 5px;
 }
 
-.btn-add:hover {
+.add-country:hover {
     background-color: #005599;
 }

@@ -16,11 +16,6 @@
                 <th>Photo</th>
                 <th>Prénom</th>
                 <th>Nom</th>
-                <th>Sport pratiqué</th>
-                <th>Biographie</th>
-                <th>Réalisations</th>
-                <th>Compétences spéciales</th>
-                <th>Réseaux sociaux</th>
                 <th>Profil</th>
             </tr>
         </thead>
@@ -29,11 +24,6 @@
                 <td><img th:src="${athlete.photo}" width="50" height="30" /></td>
                 <td th:text="${athlete.firstName}"></td>
                 <td th:text="${athlete.lastName}"></td>
-                <td th:text="${athlete.sport}"></td>
-                <td th:text="${#strings.abbreviate(athlete.biography, 100)}"></td>
-                <td th:text="${#strings.abbreviate(athlete.achievements, 100)}"></td>
-                <td th:text="${#strings.abbreviate(athlete.specialSkills, 100)}"></td>
-                <td th:text="${athlete.socialMediaLinks}"></td>
                 <td><a th:href="@{/athletes/{id}(id=${athlete.id})}">Voir le profil</a></td>
             </tr>
         </tbody>
