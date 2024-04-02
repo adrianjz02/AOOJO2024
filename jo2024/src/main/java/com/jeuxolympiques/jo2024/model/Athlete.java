@@ -18,16 +18,19 @@ public class Athlete {
     private String lastName;
 
     @Lob
+    private String sport;
+
+    @Lob
     private String biography;
 
     @Lob
     private String achievements;
 
     @Lob
-    private String skills;
+    private String specialSkills;
 
     @Column(length = 100)
-    private String socialMedia;
+    private String socialMediaLinks;
 
     public Athlete() {
     }
@@ -85,19 +88,27 @@ public class Athlete {
         this.achievements = achievements;
     }
 
-    public String getSkills() {
-        return skills;
+    public String getSpecialSkills() {
+        return specialSkills;
     }
 
-    public void setSkills(String skills) {
-        this.skills = skills;
+    public void setSpecialSkills(String specialSkills) {
+        this.specialSkills = specialSkills;
     }
 
-    public String getSocialMedia() {
-        return socialMedia;
+    public String getSocialMediaLinks() {
+        return socialMediaLinks;
     }
 
-    public void setSocialMedia(String socialMedia) {
-        this.socialMedia = socialMedia;
+    public void setSocialMediaLinks(String socialMediaLinks) {
+        this.socialMediaLinks = socialMediaLinks;
+    }
+
+    public String getSport() {
+        return sport;
+    }
+
+    public void setSport(String sport) {
+        this.sport = sport;
     }
 }

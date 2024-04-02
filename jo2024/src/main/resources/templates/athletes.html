@@ -3,7 +3,7 @@
 
 <head>
     <title>Liste des athlètes</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/athlete.css}" >
+    <link rel="stylesheet" type="text/css" th:href="@{/athlete.css}">
 </head>
 
 
@@ -16,9 +16,10 @@
                 <th>Photo</th>
                 <th>Prénom</th>
                 <th>Nom</th>
+                <th>Sport pratiqué</th>
                 <th>Biographie</th>
                 <th>Réalisations</th>
-                <th>Compétences</th>
+                <th>Compétences spéciales</th>
                 <th>Réseaux sociaux</th>
                 <th>Profil</th>
             </tr>
@@ -28,10 +29,11 @@
                 <td><img th:src="${athlete.photo}" width="50" height="30" /></td>
                 <td th:text="${athlete.firstName}"></td>
                 <td th:text="${athlete.lastName}"></td>
+                <td th:text="${athlete.sport}"></td>
                 <td th:text="${#strings.abbreviate(athlete.biography, 100)}"></td>
                 <td th:text="${#strings.abbreviate(athlete.achievements, 100)}"></td>
-                <td th:text="${#strings.abbreviate(athlete.skills, 100)}"></td>
-                <td th:text="${athlete.socialMedia}"></td>
+                <td th:text="${#strings.abbreviate(athlete.specialSkills, 100)}"></td>
+                <td th:text="${athlete.socialMediaLinks}"></td>
                 <td><a th:href="@{/athletes/{id}(id=${athlete.id})}">Voir le profil</a></td>
             </tr>
         </tbody>

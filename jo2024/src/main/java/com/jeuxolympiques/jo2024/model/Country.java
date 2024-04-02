@@ -12,7 +12,7 @@ public class Country {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
+    private String nameCountry;
 
     private String flag; // Ajout du drapeau
 
@@ -20,17 +20,17 @@ public class Country {
 
     private Long population; // Ajout de la population
 
-    private String interestingFacts; // Ajout des faits intéressants
+    private String relevantPoint; // Ajout des faits intéressants
 
     public Country() {
     }
 
-    public Country(String name, String flag, String capital, Long population, String interestingFacts) {
-        this.name = name;
+    public Country(String nameCountry, String flag, String capital, Long population, String relevantPoint) {
+        this.nameCountry = nameCountry;
         this.flag = flag;
         this.capital = capital;
         this.population = population;
-        this.interestingFacts = interestingFacts;
+        this.relevantPoint = relevantPoint;
     }
 
     public Long getId() {
@@ -41,12 +41,12 @@ public class Country {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getCountryName() {
+        return nameCountry;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCountryName(String nameCountry) {
+        this.nameCountry = nameCountry;
     }
 
     public String getFlag() {
@@ -73,11 +73,11 @@ public class Country {
         this.population = population;
     }
 
-    public String getInterestingFacts() {
-        return interestingFacts;
+    public String getRelevantPoint() {
+        return relevantPoint;
     }
 
-    public void setInterestingFacts(String interestingFacts) {
-        this.interestingFacts = interestingFacts;
+    public void setRelevantPoint(String relevantPoint) {
+        this.relevantPoint = relevantPoint;
     }
 }

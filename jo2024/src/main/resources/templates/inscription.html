@@ -1,32 +1,64 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Créer un compte</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" integrity="sha384-oOE/3m0LUMPub4kaC09mrdEhIc+e3exm4xOGxAmuFXhBNF4hcg/6MiAXAf5p0P56" crossorigin="anonymous"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 300px;
+            padding: 20px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-signin-heading {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            margin-top: 10px;
+        }
+    </style>
 </head>
+
 <body>
     <div class="container">
-    <form method="post" action="/inscription">
-        <h2 class="form-signin-heading">S'inscrire</h2>
+        <form method="post" action="/inscription">
+            <h2 class="form-signin-heading">S'inscrire</h2>
 
-        <p>
-            <label for="email">Email : </label>
-            <input type="email" id="email" name="email" class="form-control" placeholder="Email" required autofocus>
-        </p>
-        <p>
-            <label for="password">Mot de passe : </label>
-            <input type="password" id="password" name="password" class="form-control" placeholder="Mot de passe" required>
-        </p>
-        <p>
-            <label for="name">Nom : </label>
-            <input type="text" name="name" id="name" class="form-control" placeholder="Nom" required>
-        </p>
-        <br>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">S'inscrire</button>
-        <br>
-        <a href="/login"><button class="btn btn-lg btn-primary btn-block" type="button"> Se connecter</button></a>
-    </form>
+            <div class="form-group">
+                <label for="email">Email : </label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Email" required autofocus>
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe : </label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Mot de passe"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="name">Nom : </label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Nom" required>
+            </div>
+            <br>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">S'inscrire</button>
+            <br>
+            <a href="/login"><button class="btn btn-lg btn-primary btn-block" type="button"> Se connecter</button></a>
+        </form>
 </body>
+
 </html>
