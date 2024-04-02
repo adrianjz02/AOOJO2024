@@ -31160,3 +31160,402 @@ org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property o
 23:02:31.871 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /error
 23:02:31.917 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
 >>>>>>> f78834b2297c7aad929658f9e4280a2030d3093f
+23:51:30.405 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+23:51:30.455 [restartedMain] INFO  c.j.jo2024.Jo2024Application - Starting Jo2024Application using Java 17.0.2 with PID 12240 (C:\Users\adrji\Desktop\AOOJO2024\jo2024\target\classes started by adrji in C:\Users\adrji\Desktop\AOOJO2024\jo2024)
+23:51:30.456 [restartedMain] INFO  c.j.jo2024.Jo2024Application - No active profile set, falling back to 1 default profile: "default"
+23:51:30.494 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+23:51:30.494 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+23:51:31.099 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+23:51:31.155 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 3 JPA repository interfaces.
+23:51:31.711 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+23:51:31.721 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+23:51:31.724 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+23:51:31.724 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+23:51:31.785 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+23:51:31.787 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1291 ms
+23:51:31.818 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+23:51:32.095 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1293fffc
+23:51:32.098 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+23:51:32.106 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/aoojo2024'
+23:51:32.253 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+23:51:32.319 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.0.CR1
+23:51:32.354 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+23:51:32.571 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+23:51:33.345 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+23:51:33.379 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23:51:33.720 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+23:51:33.959 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@65a0416a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45331e2d, org.springframework.security.web.context.SecurityContextHolderFilter@f61a24, org.springframework.security.web.header.HeaderWriterFilter@3e09caea, org.springframework.web.filter.CorsFilter@2d14625d, org.springframework.security.web.authentication.logout.LogoutFilter@289fd089, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@25c00e37, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e3c0353, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@39ea1196, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4f3512a4, org.springframework.security.web.access.ExceptionTranslationFilter@13d9bcad, org.springframework.security.web.access.intercept.AuthorizationFilter@7c9a5a10]
+23:51:34.192 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+23:51:34.207 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+23:51:34.229 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+23:51:34.238 [restartedMain] INFO  c.j.jo2024.Jo2024Application - Started Jo2024Application in 4.044 seconds (process running for 4.495)
+23:52:03.308 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:52:03.308 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+23:52:03.309 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+23:52:03.322 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countries
+23:52:03.329 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countries
+23:52:03.650 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+23:52:03.739 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countries.css
+23:52:03.740 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countries.css
+23:52:03.747 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+23:52:07.143 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /accueil
+23:52:07.144 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /accueil
+23:52:07.145 [http-nio-8080-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+23:52:07.145 [http-nio-8080-exec-3] INFO  c.j.j.controller.web.ControllerTest - Bienvenue dans la page d'accueil
+23:52:07.204 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /accueil.css
+23:52:07.205 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /accueil.css
+23:52:07.208 [http-nio-8080-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+23:52:08.082 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /login
+23:52:08.082 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /login
+23:52:08.083 [http-nio-8080-exec-5] INFO  c.j.j.controller.web.UserController - Affichage du formulaire de connexion
+23:52:08.086 [http-nio-8080-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+23:52:10.167 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing POST /login
+23:52:10.230 [http-nio-8080-exec-6] INFO  c.j.jo2024.service.UserService - Tentative de chargement de l'utilisateur avec l'email : a@a.a
+23:52:10.323 [http-nio-8080-exec-6] DEBUG o.s.s.a.d.DaoAuthenticationProvider - Authenticated user
+23:52:10.345 [http-nio-8080-exec-6] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@65f2cdbc]
+23:52:10.345 [http-nio-8080-exec-6] DEBUG o.s.s.w.a.UsernamePasswordAuthenticationFilter - Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]
+23:52:10.346 [http-nio-8080-exec-6] INFO  c.j.j.E.S.AuthenticationSuccessListener - Connexion réussie pour l'utilisateur : a@a.a
+23:52:10.346 [http-nio-8080-exec-6] DEBUG o.s.s.web.DefaultRedirectStrategy - Redirecting to /accueil?loginSuccess=true
+23:52:10.350 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /accueil?loginSuccess=true
+23:52:10.352 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /accueil?loginSuccess=true
+23:52:10.353 [http-nio-8080-exec-7] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:52:10.353 [http-nio-8080-exec-7] INFO  c.j.j.controller.web.ControllerTest - Bienvenue dans la page d'accueil
+23:52:10.389 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /accueil.css
+23:52:10.389 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /accueil.css
+23:52:10.392 [http-nio-8080-exec-8] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:52:11.373 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /showMap
+23:52:11.374 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /showMap
+23:52:11.377 [http-nio-8080-exec-9] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:52:16.059 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /accueil?loginSuccess=true
+23:52:16.060 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /accueil?loginSuccess=true
+23:52:16.060 [http-nio-8080-exec-10] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:52:16.061 [http-nio-8080-exec-10] INFO  c.j.j.controller.web.ControllerTest - Bienvenue dans la page d'accueil
+23:52:16.090 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /accueil.css
+23:52:16.091 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /accueil.css
+23:52:16.094 [http-nio-8080-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:52:16.666 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countries
+23:52:16.667 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countries
+23:52:16.674 [http-nio-8080-exec-2] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:52:16.719 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countries.css
+23:52:16.720 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countries.css
+23:52:16.723 [http-nio-8080-exec-3] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:52:34.027 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countries
+23:52:34.027 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countries
+23:52:34.036 [http-nio-8080-exec-4] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:52:34.081 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countries.css
+23:52:34.083 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countries.css
+23:52:34.086 [http-nio-8080-exec-5] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:52:34.665 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countries/add
+23:52:34.666 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countries/add
+23:52:34.674 [http-nio-8080-exec-6] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:52:34.722 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countriesadd.css
+23:52:34.723 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countriesadd.css
+23:52:34.726 [http-nio-8080-exec-7] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:53:24.946 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing POST /countries/add
+23:53:24.947 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured POST /countries/add
+23:53:24.996 [http-nio-8080-exec-9] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: S0022
+23:53:24.996 [http-nio-8080-exec-9] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Column 'id' not found.
+23:53:25.008 [http-nio-8080-exec-9] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:53:25.013 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countries
+23:53:25.013 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countries
+23:53:25.022 [http-nio-8080-exec-10] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:53:25.066 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countries.css
+23:53:25.067 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countries.css
+23:53:25.070 [http-nio-8080-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:53:28.316 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countries/add
+23:53:28.317 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countries/add
+23:53:28.320 [http-nio-8080-exec-2] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:53:28.371 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countriesadd.css
+23:53:28.372 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countriesadd.css
+23:53:28.375 [http-nio-8080-exec-3] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:53:53.299 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing POST /countries/add
+23:53:53.300 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured POST /countries/add
+23:53:53.309 [http-nio-8080-exec-4] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: S0022
+23:53:53.309 [http-nio-8080-exec-4] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Column 'id' not found.
+23:53:53.315 [http-nio-8080-exec-4] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:53:53.319 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countries
+23:53:53.320 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countries
+23:53:53.327 [http-nio-8080-exec-5] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:53:53.361 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countries.css
+23:53:53.362 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countries.css
+23:53:53.365 [http-nio-8080-exec-6] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:53:55.208 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countries/add
+23:53:55.208 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countries/add
+23:53:55.212 [http-nio-8080-exec-7] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:53:55.259 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countriesadd.css
+23:53:55.260 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countriesadd.css
+23:53:55.262 [http-nio-8080-exec-8] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:54:24.370 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing POST /countries/add
+23:54:24.371 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured POST /countries/add
+23:54:24.382 [http-nio-8080-exec-9] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: S0022
+23:54:24.382 [http-nio-8080-exec-9] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Column 'id' not found.
+23:54:24.389 [http-nio-8080-exec-9] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:54:24.392 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countries
+23:54:24.393 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countries
+23:54:24.400 [http-nio-8080-exec-9] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:54:24.437 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countries.css
+23:54:24.438 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countries.css
+23:54:24.441 [http-nio-8080-exec-10] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:54:59.228 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /accueil
+23:54:59.229 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /accueil
+23:54:59.229 [http-nio-8080-exec-2] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:54:59.230 [http-nio-8080-exec-2] INFO  c.j.j.controller.web.ControllerTest - Bienvenue dans la page d'accueil
+23:54:59.285 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /accueil.css
+23:54:59.286 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /accueil.css
+23:54:59.289 [http-nio-8080-exec-3] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:55:02.092 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /athletes
+23:55:02.092 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /athletes
+23:55:02.109 [http-nio-8080-exec-4] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:55:02.161 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /athlete.css
+23:55:02.161 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /athlete.css
+23:55:02.165 [http-nio-8080-exec-5] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:55:31.505 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /athletes
+23:55:31.505 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /athletes
+23:55:31.516 [http-nio-8080-exec-6] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:55:31.558 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /athlete.css
+23:55:31.559 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /athlete.css
+23:55:31.561 [http-nio-8080-exec-7] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:57:35.775 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /accueil
+23:57:35.776 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /accueil
+23:57:35.776 [http-nio-8080-exec-10] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:57:35.777 [http-nio-8080-exec-10] INFO  c.j.j.controller.web.ControllerTest - Bienvenue dans la page d'accueil
+23:57:35.830 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /accueil.css
+23:57:35.831 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /accueil.css
+23:57:35.834 [http-nio-8080-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:57:36.631 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /showMap
+23:57:36.632 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /showMap
+23:57:36.634 [http-nio-8080-exec-2] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:57:38.497 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /accueil
+23:57:38.497 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /accueil
+23:57:38.498 [http-nio-8080-exec-3] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:57:38.498 [http-nio-8080-exec-3] INFO  c.j.j.controller.web.ControllerTest - Bienvenue dans la page d'accueil
+23:57:38.536 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /accueil.css
+23:57:38.536 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /accueil.css
+23:57:38.539 [http-nio-8080-exec-4] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:57:39.022 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countries
+23:57:39.023 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countries
+23:57:39.030 [http-nio-8080-exec-5] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:57:39.078 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countries.css
+23:57:39.079 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countries.css
+23:57:39.082 [http-nio-8080-exec-6] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:57:40.161 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countries/add
+23:57:40.162 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countries/add
+23:57:40.165 [http-nio-8080-exec-7] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:57:40.215 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countriesadd.css
+23:57:40.215 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countriesadd.css
+23:57:40.218 [http-nio-8080-exec-8] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:58:07.498 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing POST /countries/add
+23:58:07.498 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured POST /countries/add
+23:58:07.514 [http-nio-8080-exec-9] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1406, SQLState: 22001
+23:58:07.515 [http-nio-8080-exec-9] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Data truncation: Data too long for column 'flag' at row 1
+23:58:07.521 [http-nio-8080-exec-9] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:58:07.522 [http-nio-8080-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: could not execute statement [Data truncation: Data too long for column 'flag' at row 1] [insert into country (capital,flag,name_country,population,relevant_point) values (?,?,?,?,?)]; SQL [insert into country (capital,flag,name_country,population,relevant_point) values (?,?,?,?,?)]] with root cause
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'flag' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:912)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1054)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1003)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1312)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:988)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)
+	at org.hibernate.id.insert.GetGeneratedKeysDelegate.performMutation(GetGeneratedKeysDelegate.java:116)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:47)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:194)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:132)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:95)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:85)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:670)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:291)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:272)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:386)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:300)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:219)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:134)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:757)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:741)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364)
+	at jdk.proxy4/jdk.proxy4.$Proxy120.persist(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:319)
+	at jdk.proxy4/jdk.proxy4.$Proxy120.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:618)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:164)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:220)
+	at jdk.proxy4/jdk.proxy4.$Proxy125.save(Unknown Source)
+	at com.jeuxolympiques.jo2024.controller.web.CountryController.addCountry(CountryController.java:37)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+23:58:07.540 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing POST /error
+23:58:07.540 [http-nio-8080-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured POST /error
+23:58:07.557 [http-nio-8080-exec-9] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:58:08.368 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countries/add
+23:58:08.369 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countries/add
+23:58:08.372 [http-nio-8080-exec-10] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:58:08.401 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countriesadd.css
+23:58:08.401 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countriesadd.css
+23:58:08.404 [http-nio-8080-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:58:14.310 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing POST /countries/add
+23:58:14.311 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured POST /countries/add
+23:58:14.321 [http-nio-8080-exec-2] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: S0022
+23:58:14.321 [http-nio-8080-exec-2] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Column 'id' not found.
+23:58:14.325 [http-nio-8080-exec-2] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:58:14.328 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countries
+23:58:14.329 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countries
+23:58:14.337 [http-nio-8080-exec-2] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:58:14.377 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countries.css
+23:58:14.378 [http-nio-8080-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countries.css
+23:58:14.381 [http-nio-8080-exec-3] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:58:15.588 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countries/add
+23:58:15.589 [http-nio-8080-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countries/add
+23:58:15.591 [http-nio-8080-exec-4] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:58:15.641 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countriesadd.css
+23:58:15.641 [http-nio-8080-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countriesadd.css
+23:58:15.644 [http-nio-8080-exec-5] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:59:00.957 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing POST /countries/add
+23:59:00.958 [http-nio-8080-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured POST /countries/add
+23:59:00.969 [http-nio-8080-exec-6] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: S0022
+23:59:00.969 [http-nio-8080-exec-6] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Column 'id' not found.
+23:59:00.976 [http-nio-8080-exec-6] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:59:00.980 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countries
+23:59:00.981 [http-nio-8080-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countries
+23:59:00.991 [http-nio-8080-exec-7] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
+23:59:01.028 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /countries.css
+23:59:01.029 [http-nio-8080-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /countries.css
+23:59:01.031 [http-nio-8080-exec-8] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1760/0x0000000801496900@5d7af6b0]]]
