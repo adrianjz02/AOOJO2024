@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <title>Profil de l'athlète</title>
 </head>
+
 <body>
     <h1 th:text="${athlete.firstName} ' ' ${athlete.lastName}"></h1>
     <p>Biographie : <span th:text="${athlete.biography}"></span></p>
@@ -12,4 +14,5 @@
     <p>Photo : <img th:src="@{${athlete.photo}}" alt="Photo de l'athlète" width="200" /></p>
     <a th:href="@{/athletes}">Retour à la liste des athlètes</a>
 </body>
+
 </html>

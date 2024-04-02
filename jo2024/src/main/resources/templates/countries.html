@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
 <head>
     <title>Liste des pays participants</title>
     <link rel="stylesheet" type="text/css" th:href="@{/countries.css}">
 </head>
+
 <body>
     <h1>Liste des pays participants aux JO24</h1>
     <a th:href="@{/accueil}">Accueil</a>
@@ -21,7 +22,7 @@
         <tbody>
             <tr th:each="country : ${countries}">
                 <td th:text="${country.name}"></td>
-                <td><img th:src="${country.flag}" width="50" height="30"/></td>
+                <td><img th:src="${country.flag}" width="50" height="30" /></td>
                 <td th:text="${country.capital}"></td>
                 <td th:text="${country.population}"></td>
                 <td th:text="${country.interestingFacts}"></td>
@@ -33,4 +34,5 @@
         <a th:href="@{/countries/add}">Ajouter un pays</a>
     </div>
 </body>
+
 </html>

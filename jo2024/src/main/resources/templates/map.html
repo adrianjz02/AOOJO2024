@@ -1,42 +1,44 @@
 <html>
-  <head>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load("current", {
-        "packages":["map"],
-        // Note: you will need to get a mapsApiKey for your project.
-        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
-        "mapsApiKey": "AIzaSyBnW33gsPk9fX8La9VSMOzIrF_A8DlYAPg"
-      });
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Lat', 'Long', 'Name'],
-          [48.8566, 2.3522, 'Paris'],
-          [48.8167715,2.3595911, 'Salle d\'escalade'],
-          [48.8208333,2.3682581, 'Salle Basket'],
-          [48.9046121,2.3795189, 'Salle Basket'],
-          [48.81989,2.393737, 'Salle futsal'],
-          [48.8413634,2.2530693, 'Terrain de Foot'],
-          [48.935773,2.3580232, 'Terrain de Foot'],
-          [48.8432938,2.252952, 'Terrain de rugby'],
-        ]);
 
-        var options = {
-          center: {lat: 48.8566, lng: 2.3522}, // Centrer la carte sur Paris
-          zoom: 11, // Niveau de zoom
-          showTooltip: true,
-          showInfoWindow: true
-        };
+<head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("current", {
+      "packages": ["map"],
+      // Note: you will need to get a mapsApiKey for your project.
+      // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+      "mapsApiKey": "AIzaSyBnW33gsPk9fX8La9VSMOzIrF_A8DlYAPg"
+    });
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Lat', 'Long', 'Name'],
+        [48.8566, 2.3522, 'Paris'],
+        [48.8167715, 2.3595911, 'Salle d\'escalade'],
+        [48.8208333, 2.3682581, 'Salle Basket'],
+        [48.9046121, 2.3795189, 'Salle Basket'],
+        [48.81989, 2.393737, 'Salle futsal'],
+        [48.8413634, 2.2530693, 'Terrain de Foot'],
+        [48.935773, 2.3580232, 'Terrain de Foot'],
+        [48.8432938, 2.252952, 'Terrain de rugby'],
+      ]);
 
-        var map = new google.visualization.Map(document.getElementById('map_div'));
-        map.draw(data, options);
-      }
+      var options = {
+        center: { lat: 48.8566, lng: 2.3522 }, // Centrer la carte sur Paris
+        zoom: 11, // Niveau de zoom
+        showTooltip: true,
+        showInfoWindow: true
+      };
 
-    </script>
-  </head>
+      var map = new google.visualization.Map(document.getElementById('map_div'));
+      map.draw(data, options);
+    }
 
-  <body>
-    <div id="map_div" style="width: 800px; height: 700px"></div>
-  </body>
+  </script>
+</head>
+
+<body>
+  <div id="map_div" style="width: 800px; height: 700px"></div>
+</body>
+
 </html>

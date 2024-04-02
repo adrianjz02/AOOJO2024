@@ -11,6 +11,7 @@
             padding: 50px;
             font-family: Arial, sans-serif;
         }
+
         h2 {
             color: green;
         }
@@ -29,12 +30,12 @@
 
             if (loginSuccess && authenticated) {
                 alertLogin.style.display = "block"; // Afficher l'alerte de connexion réussie
-                setTimeout(function() {
+                setTimeout(function () {
                     alertLogin.style.display = "none"; // Masquer l'alerte après 5 secondes
                 }, 5000);
             } else if (logoutSuccess && !authenticated) {
                 alertLogout.style.display = "block"; // Afficher l'alerte de déconnexion réussie
-                setTimeout(function() {
+                setTimeout(function () {
                     alertLogout.style.display = "none"; // Masquer l'alerte après 5 secondes
                 }, 5000);
             }
@@ -44,11 +45,11 @@
 </head>
 
 <body>
-    <div id="alert-login" style="display: none";>
+    <div id="alert-login" style="display: none" ;>
         <h2>Connexion réussie!</h2>
         <p>Votre connexion a été établie avec succès.</p>
     </div>
-    <div id="alert-logout"style="display: none";>
+    <div id="alert-logout" style="display: none" ;>
         <h2>Déconnexion réussie!</h2>
         <p>Vous avez été déconnecté avec succès.</p>
     </div>
