@@ -17,6 +17,7 @@
                 <th>Capitale</th>
                 <th>Population</th>
                 <th>Faits intéressants</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -26,6 +27,11 @@
                 <td th:text="${country.capital}"></td>
                 <td th:text="${country.population}"></td>
                 <td th:text="${country.relevantPoint}"></td>
+                <td>
+                    <div sec:authorize="hasRole('ADMIN')">
+                        <a th:href="@{/countries/delete/{id} (id=${country.id})}" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce pays ?')">Supprimer</a>
+                    </div>
+                </td>
             </tr>
         </tbody>
     </table>
