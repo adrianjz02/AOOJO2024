@@ -88,19 +88,19 @@ public class Athlete {
         this.achievements = achievements;
     }
 
-    public String getspecialSkills() {
+    public String getSpecialSkills() {
         return specialSkills;
     }
 
-    public void setspecialSkills(String specialSkills) {
+    public void setSpecialSkills(String specialSkills) {
         this.specialSkills = specialSkills;
     }
 
-    public String getsocialMediaLinks() {
+    public String getSocialMediaLinks() {
         return socialMediaLinks;
     }
 
-    public void setsocialMediaLinks(String socialMediaLinks) {
+    public void setSocialMediaLinks(String socialMediaLinks) {
         this.socialMediaLinks = socialMediaLinks;
     }
 

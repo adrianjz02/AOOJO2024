@@ -41,11 +41,11 @@ public class Country {
         this.id = id;
     }
 
-    public String getnameCountry() {
+    public String getCountryName() {
         return nameCountry;
     }
 
-    public void setnameCountry(String nameCountry) {
+    public void setCountryName(String nameCountry) {
         this.nameCountry = nameCountry;
     }
 
@@ -73,11 +73,11 @@ public class Country {
         this.population = population;
     }
 
-    public String getrelevantPoint() {
+    public String getRelevantPoint() {
         return relevantPoint;
     }
 
-    public void setrelevantPoint(String relevantPoint) {
+    public void setRelevantPoint(String relevantPoint) {
         this.relevantPoint = relevantPoint;
     }
 }
