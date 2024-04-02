@@ -13,8 +13,8 @@
 
     <form method="post" th:action="@{/countries/add}" enctype="multipart/form-data">
 
-        <label for="name">Nom du pays :</label><br>
-        <input type="text" id="name" name="name" required><br>
+        <label for="nameCountry">Nom du pays :</label><br>
+        <input type="text" id="nameCountry" name="nameCountry" required><br>
 
         <label for="flag">URL du drapeau :</label><br>
         <input type="text" id="flag" name="flag" required><br>
@@ -25,8 +25,8 @@
         <label for="population">Population :</label><br>
         <input type="number" id="population" name="population" required><br>
 
-        <label for="interestingFacts">Faits intéressants :</label><br>
-        <textarea id="interestingFacts" name="interestingFacts" rows="4" cols="50" required></textarea><br>
+        <label for="relevantPoint">Faits intéressants :</label><br>
+        <textarea id="relevantPoint" name="relevantPoint" rows="4" cols="50" required></textarea><br>
 
         <input type="submit" value="Ajouter le pays">
     </form>

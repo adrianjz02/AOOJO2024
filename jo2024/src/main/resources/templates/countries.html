@@ -21,11 +21,11 @@
         </thead>
         <tbody>
             <tr th:each="country : ${countries}">
-                <td th:text="${country.name}"></td>
+                <td th:text="${country.nameCountry}"></td>
                 <td><img th:src="${country.flag}" width="50" height="30" /></td>
                 <td th:text="${country.capital}"></td>
                 <td th:text="${country.population}"></td>
-                <td th:text="${country.interestingFacts}"></td>
+                <td th:text="${country.relevantPoint}"></td>
             </tr>
         </tbody>
     </table>

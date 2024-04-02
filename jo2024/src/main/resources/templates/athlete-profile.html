@@ -7,10 +7,11 @@
 
 <body>
     <h1 th:text="${athlete.firstName} ' ' ${athlete.lastName}"></h1>
+    <p>Sport pratiqué<span th:text="${athlete.sport}"></span></p>
     <p>Biographie : <span th:text="${athlete.biography}"></span></p>
     <p>Réalisations : <span th:text="${athlete.achievements}"></span></p>
-    <p>Compétences : <span th:text="${athlete.skills}"></span></p>
-    <p>Réseaux sociaux : <span th:text="${athlete.socialMedia}"></span></p>
+    <p>Compétences : <span th:text="${athlete.specialSkills}"></span></p>
+    <p>Réseaux sociaux : <span th:text="${athlete.socialMediaLinks}"></span></p>
     <p>Photo : <img th:src="@{${athlete.photo}}" alt="Photo de l'athlète" width="200" /></p>
     <a th:href="@{/athletes}">Retour à la liste des athlètes</a>
 </body>
