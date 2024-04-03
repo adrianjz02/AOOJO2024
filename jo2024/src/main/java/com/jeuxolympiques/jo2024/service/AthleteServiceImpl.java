@@ -1,7 +1,8 @@
 package com.jeuxolympiques.jo2024.service;
 
 import com.jeuxolympiques.jo2024.model.Athlete;
-import com.jeuxolympiques.jo2024.repository.AthleteRepository;
+import com.jeuxolympiques.jo2024.persistence.AthleteRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

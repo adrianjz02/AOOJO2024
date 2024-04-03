@@ -1,24 +1,14 @@
 package com.jeuxolympiques.jo2024.controller.web;
 
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.servlet.view.RedirectView;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.core.AuthenticationException;
-
-import com.jeuxolympiques.jo2024.model.User;
-import com.jeuxolympiques.jo2024.service.UserService;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import com.jeuxolympiques.jo2024.model.User.User;
+import com.jeuxolympiques.jo2024.service.UserService.UserRegistrationService;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -27,44 +17,58 @@ import lombok.extern.slf4j.Slf4j;
 @AllArgsConstructor
 @Slf4j
 public class UserController {
-    private UserService userService;
-    private AuthenticationManager authenticationManager;    
+
+    private final UserRegistrationService userRegistrationService;
 
     @GetMapping("/inscription")
-    public String showRegistrationForm() {
+    public String registrationForm() {
         log.info("Affichage du formulaire d'inscription");
         return "inscription";
     }
+    
 
+    // @PostMapping("/inscription")
+    // public String registerUser(@ModelAttribute User user, RedirectAttributes redirectAttributes) {
+    //     try {
+    //         userRegistrationService.registerUser(user);
+    //         log.info("L'utilisateur : {} a bien été inscrit !", user.getName());
+    //         return "redirect:/accueil";
+    //     } catch (EmailAlreadyExistsException e) {
+    //         redirectAttributes.addFlashAttribute("errorMessage", "Cet email est déjà utilisé. Veuillez en choisir un autre.");
+    //         return "redirect:/inscription";
+    //     } catch (PasswordLengthException e) {
+    //         redirectAttributes.addFlashAttribute("errorMessage", "Le mot de passe doit contenir au moins 6 caractères.");
+    //         return "redirect:/inscription";
+    //     }
+    // }
     @PostMapping("/inscription")
-    public String registration(@ModelAttribute User user) {
-        userService.saveUser(user);
-        log.info("L'utilisateur : {}", user.getName(), "a bien été inscrit !!");
-        return "redirect:/accueil";
+    public String registerUser(@ModelAttribute User user, RedirectAttributes redirectAttributes) {
+        
+            userRegistrationService.registerUser(user);
+            log.info("L'utilisateur : {} a bien été inscrit !", user.getName());
+            return "redirect:/accueil";
+    
     }
 
     @GetMapping("/login")
-    public String showLoginForm() {
+    public String loginForm(@RequestParam(value = "error", required = false) String error, Model model) {
         log.info("Affichage du formulaire de connexion");
+        if (error != null) {
+            log.error(" ...");
+            if (error.equalsIgnoreCase("bad_credentials")) {
+                model.addAttribute("error", "Email ou mot de passe incorrect");
+            } else if (error.equalsIgnoreCase("disabled")) {
+                model.addAttribute("error", "Compte utilisateur désactivé");
+            } else if (error.equalsIgnoreCase("locked")) {
+                model.addAttribute("error", "Compte utilisateur verrouillé");
+            } else if (error.equalsIgnoreCase("expired")) {
+                model.addAttribute("error", "Compte utilisateur expiré");
+            } else {
+                model.addAttribute("error", "Échec de la connexion");
+            }
+            log.error("Veuillez re-essayer !");
+        }
         return "login";
     }
 
-    // @PostMapping("/login")
-    // public String login(@ModelAttribute User user, Model model) {
-    //     log.info("Tentative de connexion pour l'utilisateur : {}", user.getEmail());
-
-    //     try {
-    //         Authentication authentication = authenticationManager.authenticate(
-    //             new UsernamePasswordAuthenticationToken(user.getEmail(), user.getPassword())
-    //         );
-            
-    //         SecurityContextHolder.getContext().setAuthentication(authentication);
-    //         model.addAttribute("loginSuccess", true);        
-    //         return "redirect:/accueil"; // Redirection vers la page d'accueil
-    //     } catch (AuthenticationException e) {
-    //         log.error("Échec de la connexion pour l'utilisateur : {}", user.getEmail(), e);
-            
-    //         return "redirect:/login?error";
-    //     }
-    // }
 }

@@ -1,4 +1,4 @@
-package com.jeuxolympiques.jo2024.repository;
+package com.jeuxolympiques.jo2024.persistence;
 
 import com.jeuxolympiques.jo2024.model.Country;
 import org.springframework.data.jpa.repository.JpaRepository;

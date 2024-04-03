@@ -15,6 +15,10 @@ public class AuthenticationSuccessListener implements ApplicationListener<Intera
     @Override
     public void onApplicationEvent(InteractiveAuthenticationSuccessEvent event) {
         UserDetails userDetails = (UserDetails) event.getAuthentication().getPrincipal();
-        log.info("Connexion réussie pour l'utilisateur : {}", userDetails.getUsername());
+        logAuthenticationSuccess(userDetails.getUsername());
+    }
+
+    private void logAuthenticationSuccess(String username) {
+        log.info("L'utilisateur : {} a bien été connecté !", username);
     }
 }

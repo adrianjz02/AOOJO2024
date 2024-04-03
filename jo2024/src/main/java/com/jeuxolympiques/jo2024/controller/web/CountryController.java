@@ -1,7 +1,8 @@
 package com.jeuxolympiques.jo2024.controller.web;
 
 import com.jeuxolympiques.jo2024.model.Country;
-import com.jeuxolympiques.jo2024.repository.CountryRepository;
+import com.jeuxolympiques.jo2024.persistence.CountryRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -9,6 +9,7 @@
     <style>
         body {
             background-color: #f4f4f4;
+            padding: 50px;
         }
 
         .container {
@@ -30,6 +31,12 @@
             font-weight: bold;
         }
 
+        .alert {
+            margin: 0 auto;
+            width: 50%;
+            text-align: center;
+        }
+
         .btn-primary {
             margin-top: 10px;
         }
@@ -37,21 +44,21 @@
 </head>
 
 <body>
+    <div th:if="${error}" class="alert alert-danger">
+        <strong>Erreur : </strong> <span th:text="${error}"></span>
+    </div>
     <div class="container">
         <form method="post" action="/inscription">
-            <h2 class="form-signin-heading">S'inscrire</h2>
+            <h2 class="form-signin-heading">Inscription</h2>
 
             <div class="form-group">
-                <label for="email">Email : </label>
                 <input type="email" id="email" name="email" class="form-control" placeholder="Email" required autofocus>
             </div>
             <div class="form-group">
-                <label for="password">Mot de passe : </label>
                 <input type="password" id="password" name="password" class="form-control" placeholder="Mot de passe"
                     required>
             </div>
             <div class="form-group">
-                <label for="name">Nom : </label>
                 <input type="text" name="name" id="name" class="form-control" placeholder="Nom" required>
             </div>
             <br>

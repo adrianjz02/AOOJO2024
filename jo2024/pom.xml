@@ -91,6 +91,7 @@
 			<version>4.0.1</version> <!-- Ou la dernière version disponible -->
 			<scope>provided</scope>
 		</dependency>
+		
  </dependencies>
 
 	<build>

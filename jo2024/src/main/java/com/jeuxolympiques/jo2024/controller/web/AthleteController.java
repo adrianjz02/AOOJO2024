@@ -1,7 +1,7 @@
 package com.jeuxolympiques.jo2024.controller.web;
 
 import com.jeuxolympiques.jo2024.model.Athlete;
-import com.jeuxolympiques.jo2024.repository.AthleteRepository;
+import com.jeuxolympiques.jo2024.persistence.AthleteRepository;
 
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.validation.Valid;

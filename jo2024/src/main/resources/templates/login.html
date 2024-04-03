@@ -10,6 +10,7 @@
   <style>
     body {
       background-color: #f4f4f4;
+      padding: 50px;
     }
 
     .container {
@@ -28,16 +29,28 @@
     }
 
     label {
-      font-weight: bold;
+        font-weight: bold;
     }
 
-    .btn-primary {
-      margin-top: 10px;
-    }
+    .alert {
+        margin: 0 auto;
+        width: 50%;
+        text-align: center;
+      }
+
+      .btn-primary {
+        margin-top: 10px;
+      }
   </style>
 </head>
 
 <body>
+  <div th:if="${error}" class="alert alert-danger text-center">
+    <strong>Echec de la connexion : </strong>
+    <span th:text="${error}"></span>
+  </div>
+  <br>
+
     <div class="container">
         <form class="form-signin" method="post" action="/login">
           <h2 class="form-signin-heading">Connexion</h2>
