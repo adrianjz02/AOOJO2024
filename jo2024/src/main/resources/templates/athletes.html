@@ -6,7 +6,6 @@
     <link rel="stylesheet" type="text/css" th:href="@{/athlete.css}">
 </head>
 
-
 <body>
     <h1>Liste des athlètes</h1>
     <a th:href="@{/accueil}">Accueil</a>
@@ -17,6 +16,7 @@
                 <th>Prénom</th>
                 <th>Nom</th>
                 <th>Profil</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -25,6 +25,11 @@
                 <td th:text="${athlete.firstName}"></td>
                 <td th:text="${athlete.lastName}"></td>
                 <td><a th:href="@{/athletes/{id}(id=${athlete.id})}">Voir le profil</a></td>
+                <td>
+                    <div sec:authorize="hasRole('ADMIN')">
+                        <a th:href="@{/athletes/delete/{id} (id=${athlete.id})}" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet athlète ?')">Supprimer</a>
+                    </div>
+                </td>
             </tr>
         </tbody>
     </table>

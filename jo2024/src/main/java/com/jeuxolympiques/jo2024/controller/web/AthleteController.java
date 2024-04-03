@@ -3,9 +3,9 @@ package com.jeuxolympiques.jo2024.controller.web;
 import com.jeuxolympiques.jo2024.model.Athlete;
 import com.jeuxolympiques.jo2024.persistence.AthleteRepository;
 
+import com.jeuxolympiques.jo2024.persistence.AthleteRepository;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,6 +29,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/athletes")
 public class AthleteController {
+
     @Autowired
     private AthleteRepository athleteRepository;
 
@@ -47,7 +48,6 @@ public class AthleteController {
 
     @PostMapping("/add")
     public String addAthlete(@ModelAttribute Athlete athlete) {
-
         athleteRepository.save(athlete);
         return "redirect:/athletes";
     }
@@ -62,4 +62,9 @@ public class AthleteController {
         return "athlete-profile";
     }
 
+    @GetMapping("/delete/{id}")
+    public String deleteAthlete(@PathVariable Long id) {
+        athleteRepository.deleteById(id);
+        return "redirect:/athletes";
+    }
 }
