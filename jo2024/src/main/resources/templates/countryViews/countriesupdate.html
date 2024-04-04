@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Modifier un pays</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/countriesadd.css}">
+</head>
+
+<body>
+    <h1>Modifier un pays</h1>
+    <a th:href="@{/countries}" class="btn btn-primary">Voir les pays</a>
+
+    <form method="post" th:action="@{/countries/update/{id} (id=${country.id})}" enctype="multipart/form-data">
+
+        <label for="nameCountry">Nom du pays :</label><br>
+        <input type="text" id="nameCountry" name="nameCountry" th:value="${country.nameCountry}" required><br>
+
+        <label for="flag">URL du drapeau :</label><br>
+        <input type="text" id="flag" name="flag" th:value="${country.flag}" required><br>
+
+        <label for="capital">Capitale :</label><br>
+        <input type="text" id="capital" name="capital" th:value="${country.capital}" required><br>
+
+        <label for="population">Population :</label><br>
+        <input type="number" id="population" name="population" th:value="${country.population}" required><br>
+
+        <label for="relevantPoint">Faits intéressants :</label><br>
+        <textarea id="relevantPoint" name="relevantPoint" rows="4" cols="50" th:text="${country.relevantPoint}" required></textarea><br>
+
+        <input type="submit" value="Modifier le pays">
+    </form>
+</body>
+
+</html>

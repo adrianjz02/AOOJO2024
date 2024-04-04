@@ -1,5 +1,6 @@
 package com.jeuxolympiques.jo2024.service.UserService;
 
+import com.jeuxolympiques.jo2024.Exception.EmailAlreadyExistsException;
 import com.jeuxolympiques.jo2024.Exception.PasswordLengthException;
 import com.jeuxolympiques.jo2024.model.User.User;
 import com.jeuxolympiques.jo2024.persistence.UserRepository;
@@ -21,11 +22,11 @@ public class UserRegistrationService {
         log.info("Processus d'enregistrement de l'utilisateur : {} ...", user);
 
         if (userRepository.findByEmail(user.getEmail()).isPresent()) {
-            throw new RuntimeException("Votre email est déjà utilisé, veuillez réessayer !");
+            throw new EmailAlreadyExistsException("Votre email est déjà utilisé, veuillez réessayer !");
         }
 
         if (user.getPassword().length() < 3) {
-            throw new RuntimeException("Le mot de passe doit contenir au moins 3 caractères.");
+            throw new PasswordLengthException("Le mot de passe doit contenir au moins 3 caractères.");
         }
 
         String passwordHashed = passwordEncoder.encode(user.getPassword());

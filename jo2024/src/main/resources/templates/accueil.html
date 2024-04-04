@@ -15,6 +15,30 @@
         h2 {
             color: green;
         }
+        .description-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #1a73e8;
+            border-radius: 10px;
+            background-color: #f0f0f0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        p {
+            color: #333;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .btn-secondary {
+            background-color: #ff5722;
+            color: #fff;
+        }
+        .btn-signup {
+            background-color: #4caf50;
+            color: #fff;
+        }
     </style>
     <script th:inline="javascript">
         /*<![CDATA[*/
@@ -37,7 +61,7 @@
                 alertLogout.style.display = "block"; // Afficher l'alerte de déconnexion réussie
                 setTimeout(function () {
                     alertLogout.style.display = "none"; // Masquer l'alerte après 5 secondes
-                }, 5000);
+                }, 2500);
             }
         });
         /*]]>*/
@@ -55,19 +79,23 @@
     </div>
 
     <h1>Welcome to JO2024</h1>
+    <br>
+    <div class="description-container">
+        <p>Les Jeux Olympiques de 2024 (JO 2024) sont un événement sportif international majeur qui se déroulera à Paris, en France. Cet événement réunira des athlètes du monde entier dans une compétition qui mettra en valeur le talent, la détermination et l'esprit sportif. Préparez-vous à vivre des moments inoubliables d'athlétisme, de passion et de célébration.</p>
+    </div>
     <!-- Si l'utilisateur est connecté -->
     <div th:if="${authenticated}">
         <a th:href="@{/athletes}" class="btn btn-primary">Voir les athlètes</a>
         <a th:href="@{/countries}" class="btn btn-primary">Voir les pays</a>
         <a th:href="@{/showMap}" class="btn btn-primary">Voir les infrastructures</a>
-        <a th:href="@{/logout}" button class="btn btn-primary">Se déconnecter</a>
+        <a th:href="@{/logout}" button class="btn btn-secondary">Se déconnecter</a>
         
     </div>
 
     <!-- Si l'utilisateur n'est pas connecté -->
     <div th:unless="${authenticated}">
-        <a th:href="@{/inscription}" class="btn btn-primary">S'inscrire</a>
-        <a th:href="@{/login}" class="btn btn-primary">Se connecter</a>
+        <a th:href="@{/inscription}" class="btn btn-signup">S'inscrire</a>
+        <a th:href="@{/login}" class="btn btn-secondary">Se connecter</a>
     </div>
 
 </body>

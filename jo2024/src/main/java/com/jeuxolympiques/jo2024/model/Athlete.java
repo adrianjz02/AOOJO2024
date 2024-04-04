@@ -1,8 +1,12 @@
 package com.jeuxolympiques.jo2024.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 public class Athlete {
 
     @Id
@@ -40,75 +44,4 @@ public class Athlete {
         this.lastName = lastName;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getPhoto() {
-        return photo;
-    }
-
-    public void setPhoto(String photo) {
-        this.photo = photo;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getBiography() {
-        return biography;
-    }
-
-    public void setBiography(String biography) {
-        this.biography = biography;
-    }
-
-    public String getAchievements() {
-        return achievements;
-    }
-
-    public void setAchievements(String achievements) {
-        this.achievements = achievements;
-    }
-
-    public String getSpecialSkills() {
-        return specialSkills;
-    }
-
-    public void setSpecialSkills(String specialSkills) {
-        this.specialSkills = specialSkills;
-    }
-
-    public String getSocialMediaLinks() {
-        return socialMediaLinks;
-    }
-
-    public void setSocialMediaLinks(String socialMediaLinks) {
-        this.socialMediaLinks = socialMediaLinks;
-    }
-
-    public String getSport() {
-        return sport;
-    }
-
-    public void setSport(String sport) {
-        this.sport = sport;
-    }
 }

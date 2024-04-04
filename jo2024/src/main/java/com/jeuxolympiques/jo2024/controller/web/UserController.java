@@ -37,7 +37,7 @@ public class UserController {
             }
         }
         model.addAttribute("user", new User());
-        return "inscription";
+        return "userViews/inscription";
     }
     
     @PostMapping("/inscription")
@@ -67,7 +67,7 @@ public class UserController {
                 model.addAttribute("error", "Échec de la connexion");
             }
         }
-        return "login";
+        return "userViews/login";
     }
 
 }

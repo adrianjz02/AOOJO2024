@@ -2,9 +2,10 @@ package com.jeuxolympiques.jo2024.controller.web;
 
 import com.jeuxolympiques.jo2024.model.Country;
 import com.jeuxolympiques.jo2024.persistence.CountryRepository;
+import com.jeuxolympiques.jo2024.service.CountryService.CountryService;
 
-import com.jeuxolympiques.jo2024.persistence.CountryRepository;
-import com.jeuxolympiques.jo2024.service.CountryService;
+import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +19,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/countries")
+@Slf4j
 public class CountryController {
 
     @Autowired
@@ -28,20 +30,43 @@ public class CountryController {
 
     @GetMapping
     public String getAllCountries(Model model) {
+        log.info("Affichage de la liste des pays");
         List<Country> countries = countryRepository.findAll();
         model.addAttribute("countries", countries);
-        return "countries";
+        return "countryViews/countries";
     }
 
     @GetMapping("/add")
     public String showAddCountryForm(Model model) {
+        log.info("Affichage du formulaire d'ajout de pays");
         model.addAttribute("country", new Country());
-        return "countryadd";
+        return "countryViews/countriesadd";
     }
 
     @PostMapping("/add")
     public String addCountry(@ModelAttribute Country country) {
+        log.info("Ajout d'un nouveau pays : {}", country);
         countryRepository.save(country);
+        return "redirect:/countries";
+    }
+
+    @GetMapping("/update/{id}")
+    public String showUpdateCountryForm(@PathVariable Long id, Model model) {
+        log.info("Affichage de la modification du pays avec l'ID : {}", id);
+        Country country = countryService.getCountryById(id);
+        if (country == null) {
+            log.error("Pays non trouvé avec l'ID : {}", id);
+            return "country-404";
+        }
+        model.addAttribute("country", country);
+        return "countryViews/countriesupdate";
+    }
+
+    @PostMapping("/update/{id}")
+    public String updateCountry(@PathVariable Long id, @ModelAttribute Country country) {
+        log.info("Mise à jour du pays avec l'ID : {}", id);
+        country.setId(id);
+        countryService.updateCountry(country);
         return "redirect:/countries";
     }
 

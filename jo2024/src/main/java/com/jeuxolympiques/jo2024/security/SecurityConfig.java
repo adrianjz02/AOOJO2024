@@ -31,7 +31,7 @@ public class SecurityConfig {
         };
     
         public static final String[] PRIVATE_URLS = {
-                "/countries", "/athletes"
+                "/countries", "/countries/**", "/athletes", "/athletes/**"
         };
 
         public static final String LOGIN_SUCCESS_URL = "/accueil?loginSuccess=true";
