@@ -20,16 +20,14 @@ public class UserRegistrationService {
     public void registerUser(User user) {
         log.info("Processus d'enregistrement de l'utilisateur : {} ...", user);
 
-        if (user.getPassword().length() < 3) {
-            log.error("Le mot de passe doit contenir au moins 3 caractères.");
+        if (userRepository.findByEmail(user.getEmail()).isPresent()) {
+            throw new RuntimeException("Votre email est déjà utilisé, veuillez réessayer !");
         }
 
-        if (!user.getEmail().contains("@") || !user.getEmail().contains(".")) {
-            log.error("Votre email est invalide, veuillez réessayer !", user.getEmail());
+        if (user.getPassword().length() < 3) {
+            throw new RuntimeException("Le mot de passe doit contenir au moins 3 caractères.");
         }
-        if (userRepository.findByEmail(user.getEmail()).isPresent()) {
-            log.error("Votre email est déjà utilisé, veuillez réessayer !", user.getEmail());
-        }
+
         String passwordHashed = passwordEncoder.encode(user.getPassword());
         user.setPassword(passwordHashed);
         userRepository.save(user);

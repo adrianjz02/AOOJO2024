@@ -44,9 +44,11 @@
 </head>
 
 <body>
-    <div th:if="${error}" class="alert alert-danger">
-        <strong>Erreur : </strong> <span th:text="${error}"></span>
-    </div>
+    <div th:if="${error}" class="alert alert-danger text-center">
+        <strong>Echec de l'inscription : </strong>
+        <span th:text="${error}"></span>
+      </div>
+      <br>
     <div class="container">
         <form method="post" action="/inscription">
             <h2 class="form-signin-heading">Inscription</h2>
