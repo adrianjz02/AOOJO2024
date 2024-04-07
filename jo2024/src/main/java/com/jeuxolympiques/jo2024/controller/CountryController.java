@@ -2,7 +2,7 @@ package com.jeuxolympiques.jo2024.controller;
 
 import com.jeuxolympiques.jo2024.model.Country;
 import com.jeuxolympiques.jo2024.persistence.CountryRepository;
-import com.jeuxolympiques.jo2024.service.CountryService.CountryService;
+import com.jeuxolympiques.jo2024.service.countryService.CountryService;
 
 import lombok.extern.slf4j.Slf4j;
 

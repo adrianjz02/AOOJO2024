@@ -1,4 +1,4 @@
-package com.jeuxolympiques.jo2024.Exception;
+package com.jeuxolympiques.jo2024.exception;
 
 public class PasswordLengthException extends RuntimeException {
 
