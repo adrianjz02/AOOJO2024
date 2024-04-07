@@ -31436,3 +31436,26 @@ org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property o
 00:22:59.762 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /athlete.css
 00:22:59.763 [http-nio-8080-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /athlete.css
 00:22:59.766 [http-nio-8080-exec-10] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=User [id=1, email=a@a.a, name=a], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=null], Granted Authorities=[com.jeuxolympiques.jo2024.model.User$$Lambda$1838/0x00000008016f6930@53ea2f26]]]
+23:18:50.448 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.jeuxolympiques.jo2024.Jo2024ApplicationTests]: Jo2024ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:18:50.564 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.jeuxolympiques.jo2024.Jo2024Application for test class com.jeuxolympiques.jo2024.Jo2024ApplicationTests
+23:18:50.768 [main] INFO  o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+23:18:50.991 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+23:18:51.036 [main] INFO  c.j.jo2024.Jo2024ApplicationTests - Starting Jo2024ApplicationTests using Java 17.0.2 with PID 13840 (started by adrji in C:\Users\adrji\Desktop\AOOJO2024\jo2024)
+23:18:51.037 [main] INFO  c.j.jo2024.Jo2024ApplicationTests - No active profile set, falling back to 1 default profile: "default"
+23:18:51.839 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+23:18:51.920 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 72 ms. Found 3 JPA repository interfaces.
+23:18:52.409 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+23:18:52.513 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.0.CR1
+23:18:52.561 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+23:18:52.920 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+23:18:52.958 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+23:18:53.358 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6de84336
+23:18:53.360 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+23:18:54.495 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+23:18:54.831 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+23:18:55.332 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+23:18:55.738 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7f38545a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@549be307, org.springframework.security.web.context.SecurityContextHolderFilter@268f126f, org.springframework.security.web.header.HeaderWriterFilter@585718dd, org.springframework.web.filter.CorsFilter@d03cdc7, org.springframework.security.web.authentication.logout.LogoutFilter@4ccf1d3e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1de6f29d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3e8995cc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@625c9248, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@59043128, org.springframework.security.web.access.ExceptionTranslationFilter@15ade272, org.springframework.security.web.access.intercept.AuthorizationFilter@55d776ac]
+23:18:56.115 [main] INFO  c.j.jo2024.Jo2024ApplicationTests - Started Jo2024ApplicationTests in 5.339 seconds (process running for 7.121)
+23:18:56.615 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+23:18:56.617 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+23:18:56.628 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

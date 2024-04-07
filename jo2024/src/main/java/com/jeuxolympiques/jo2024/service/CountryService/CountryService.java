@@ -1,4 +1,4 @@
-package com.jeuxolympiques.jo2024.service.countryService;
+package com.jeuxolympiques.jo2024.service.CountryService;
 
 import com.jeuxolympiques.jo2024.model.Country;
 import java.util.List;

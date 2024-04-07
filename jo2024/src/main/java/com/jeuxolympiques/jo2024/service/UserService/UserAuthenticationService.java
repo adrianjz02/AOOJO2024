@@ -1,4 +1,4 @@
-package com.jeuxolympiques.jo2024.service.userService;
+package com.jeuxolympiques.jo2024.service.UserService;
 
 import com.jeuxolympiques.jo2024.model.User.User;
 import com.jeuxolympiques.jo2024.model.User.UserDetailsImpl;

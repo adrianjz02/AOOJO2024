@@ -1,7 +1,7 @@
-package com.jeuxolympiques.jo2024.service.userService;
+package com.jeuxolympiques.jo2024.service.UserService;
 
-import com.jeuxolympiques.jo2024.exception.EmailAlreadyExistsException;
-import com.jeuxolympiques.jo2024.exception.PasswordLengthException;
+import com.jeuxolympiques.jo2024.Exception.EmailAlreadyExistsException;
+import com.jeuxolympiques.jo2024.Exception.PasswordLengthException;
 import com.jeuxolympiques.jo2024.model.User.User;
 import com.jeuxolympiques.jo2024.persistence.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
