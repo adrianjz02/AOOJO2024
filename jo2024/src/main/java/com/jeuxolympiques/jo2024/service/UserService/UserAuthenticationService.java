@@ -1,4 +1,4 @@
-package com.jeuxolympiques.jo2024.service.UserService;
+package com.jeuxolympiques.jo2024.service.userService;
 
 import com.jeuxolympiques.jo2024.model.User.User;
 import com.jeuxolympiques.jo2024.model.User.UserDetailsImpl;
@@ -20,7 +20,7 @@ public class UserAuthenticationService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        log.info("Processus de chargement de l'utilisateur pour la connexion ...");
+        log.info("Chargement de l'utilisateur pour la connexion ...");
         User user = userRepository.findByEmail(email)
             .orElseThrow(() -> {
                 log.error("Aucun utilisateur ne correspond à cet email : {}", email);

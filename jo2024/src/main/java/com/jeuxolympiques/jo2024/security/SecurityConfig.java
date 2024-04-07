@@ -1,7 +1,5 @@
 package com.jeuxolympiques.jo2024.security;
 
-import java.io.IOException;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -12,18 +10,13 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.authentication.logout.HttpStatusReturningLogoutSuccessHandler;
 
-import com.jeuxolympiques.jo2024.Handler.AuthenticationFailureHandler.LoginFailureHandler;
-
-import org.springframework.security.core.Authentication;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import lombok.extern.slf4j.Slf4j;
+import com.jeuxolympiques.jo2024.handler.failureHandler.authenticationFailureHandler.LoginFailureHandler;
+import com.jeuxolympiques.jo2024.handler.successHandler.LoginSuccessHandler;
+import com.jeuxolympiques.jo2024.handler.successHandler.LogoutSuccessHandler;
 
 @Configuration
 @EnableWebSecurity
-@Slf4j
 public class SecurityConfig {
 
         public static final String[] PUBLIC_URLS = {
@@ -34,9 +27,15 @@ public class SecurityConfig {
                 "/countries", "/countries/**", "/athletes", "/athletes/**"
         };
 
-        public static final String LOGIN_SUCCESS_URL = "/accueil?loginSuccess=true";
-        public static final String LOGOUT_SUCCESS_URL = "/accueil?logoutSuccess=true";
+        @Bean
+        public LoginSuccessHandler loginSuccessHandler() {
+                return new LoginSuccessHandler();
+        }
 
+        @Bean
+        public LogoutSuccessHandler logoutSuccessHandler() {
+                return new LogoutSuccessHandler();
+        }
 
         @Bean
         public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
@@ -50,12 +49,14 @@ public class SecurityConfig {
                                                 .loginPage("/login")
                                                 .loginProcessingUrl("/login")
                                                 .failureHandler(new LoginFailureHandler())
-                                                .defaultSuccessUrl("/accueil?loginSuccess=true")
-                                                .permitAll())
+                                                .successHandler(loginSuccessHandler())
+                                                .permitAll()
+                                        )
                                 .logout(logout -> logout
                                                 .logoutUrl("/logout")
-                                                .logoutSuccessHandler(logoutSuccessHandler()) // Ajoutez cette ligne
-                                                .permitAll())
+                                                .logoutSuccessHandler(logoutSuccessHandler())
+                                                .permitAll()
+                                        )
                                 .build();
         }
 
@@ -65,24 +66,7 @@ public class SecurityConfig {
         }
 
         @Bean
-        public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration)
-                        throws Exception {
+        public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
                 return authenticationConfiguration.getAuthenticationManager();
-        }
-
-        @Bean
-        public HttpStatusReturningLogoutSuccessHandler logoutSuccessHandler() {
-                return new HttpStatusReturningLogoutSuccessHandler() {
-                        @Override
-                        public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response,
-                                        Authentication authentication) throws IOException {
-                                log.info("La méthode onLogoutSuccess est appelée lors de la déconnexion.");
-                                log.info("L'utilisateur : {} a bien été déconnecté !",
-                                                (authentication != null ? authentication.getName()
-                                                                : "Utilisateur inconnu"));
-
-                                response.sendRedirect(LOGOUT_SUCCESS_URL);
-                        }
-                };
-        }
+        }        
 }

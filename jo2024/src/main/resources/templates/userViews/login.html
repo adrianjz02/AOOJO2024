@@ -9,8 +9,9 @@
     integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   <style>
     body {
-      background-color: #f4f4f4;
+      text-align: center;
       padding: 50px;
+      font-family: Arial, sans-serif;
     }
 
     .container {
@@ -32,22 +33,45 @@
         font-weight: bold;
     }
 
-    .alert {
-        margin: 0 auto;
-        width: 50%;
-        text-align: center;
-      }
+    #alert-registration {
+        border: 1px solid green;
+        padding: 10px;
+        margin: 10px;
+        display: none;
+    }
 
-      .btn-primary {
+    .btn-primary {
         margin-top: 10px;
-      }
+    }
   </style>
+  <script th:inline="javascript">
+    /*<![CDATA[*/
+    window.addEventListener('DOMContentLoaded', (event) => {
+        var alertRegistration = document.getElementById("alert-registration");
+
+        var urlParams = new URLSearchParams(window.location.search);
+        var registrationSuccess = urlParams.has('registrationSuccess');
+
+        if (registrationSuccess) {
+            alertRegistration.style.display = "block"; // Afficher l'alerte d'inscription réussie
+            setTimeout(function () {
+                alertRegistration.style.display = "none"; // Masquer l'alerte après quelques secondes
+            }, 5000);
+        }
+    });
+    /*]]>*/
+</script>
+
 </head>
 
 <body>
   <div th:if="${error}" class="alert alert-danger text-center">
     <strong>Echec de la connexion : </strong>
     <span th:text="${error}"></span>
+  </div>
+  <div id="alert-registration" style="display: none" ;>
+    <h2 style="color: green">Inscription réussie!</h2>
+    <p>Votre inscription a été établie avec succès. Veuillez vous connecter.</p>
   </div>
   <br>
 

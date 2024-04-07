@@ -33,22 +33,30 @@ public class User {
     private String password;
 
     @Column
-    private String name;
+    private String firstName;
+
+    @Column
+    private String lastName;
+
+    @Column
+    private String phoneNumber;
+
+    @Column
+    private String city;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Role role = Role.USER;
 
     // Constructeur pour créer un utilisateur avec le rôle USER par défaut
-    public User(String email, String password, String name) {
+    public User(String email, String password, String firstName, String lastName, String phoneNumber, String city) {
         this.email = email;
         this.password = password;
-        this.name = name;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+        this.city = city;
         this.role = Role.USER;
     }
 
-    @Override
-    public String toString() {
-        return "User [id=" + id + ", email=" + email + ", name=" + name + "]";
-    }
 }

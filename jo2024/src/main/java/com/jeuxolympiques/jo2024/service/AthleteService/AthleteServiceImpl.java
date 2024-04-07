@@ -1,4 +1,4 @@
-package com.jeuxolympiques.jo2024.service.AthleteService;
+package com.jeuxolympiques.jo2024.service.athleteService;
 
 import com.jeuxolympiques.jo2024.model.Athlete;
 import com.jeuxolympiques.jo2024.persistence.AthleteRepository;
