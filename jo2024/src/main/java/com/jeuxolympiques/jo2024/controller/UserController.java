@@ -30,7 +30,7 @@ public class UserController {
 
     @GetMapping("/registration")
     public String showRegistrationForm(@RequestParam(value = "error", required = false) String error, Model model) {
-        log.info("Affichage du formulaire d'registration");
+        log.info("Affichage du formulaire d'inscription");
         if (error != null) {
             if (error.equalsIgnoreCase("email_already_exists")) {
                 model.addAttribute("error", "Votre email est déjà utilisé, veuillez réessayer !");

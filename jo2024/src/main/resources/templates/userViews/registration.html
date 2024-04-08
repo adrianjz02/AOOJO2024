@@ -47,8 +47,8 @@
     <div th:if="${error}" class="alert alert-danger text-center">
         <strong>Echec de l'inscription : </strong>
         <span th:text="${error}"></span>
-      </div>
-      <br>
+    </div>
+    <br>
     <div class="container">
         <form method="post" action="/registration">
             <h2 class="form-signin-heading">Inscription</h2>
@@ -67,7 +67,8 @@
                 <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Nom" required>
             </div>
             <div class="form-group">
-                <input type="text" name="phoneNumber" id="phoneNumber" class="form-control" placeholder="Numéro de téléphone" required>
+                <input type="text" name="phoneNumber" id="phoneNumber" class="form-control"
+                    placeholder="Numéro de téléphone" required>
             </div>
             <div class="form-group">
                 <input type="text" name="city" id="city" class="form-control" placeholder="Ville" required>

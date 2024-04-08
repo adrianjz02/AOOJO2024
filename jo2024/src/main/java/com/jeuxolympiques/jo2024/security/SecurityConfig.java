@@ -20,7 +20,7 @@ import com.jeuxolympiques.jo2024.handler.successHandler.LogoutSuccessHandler;
 public class SecurityConfig {
 
         public static final String[] PUBLIC_URLS = {
-                "/accueil", "/inscription", "/login"
+                "/accueil", "/registration", "/login"
         };
     
         public static final String[] PRIVATE_URLS = {

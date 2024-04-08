@@ -25,6 +25,6 @@ public class RegistrationFailureHandler implements CustomRegistrationFailureHand
             errorMessage += "technical_failure";
         }
         request.setAttribute("error", errorMessage);
-        response.sendRedirect("/inscription?" + errorMessage);
+        response.sendRedirect("/registration?" + errorMessage);
     }
 }
