@@ -26,13 +26,14 @@
         <ul class="favorite-athletes">
             <li th:each="athlete : ${user.favoriteAthletes}">
                 <div class="athlete-info">
-                    <img th:src="${athlete.photo}" alt="Photo de l'athlète width="50" height="30" />
+                    <img th:src="${athlete.photo}" alt="Photo de l'athlète" width="200" height="100" />
                     <h3 th:text="${athlete.firstName} + ' ' + ${athlete.lastName}"></h3>
                 </div>
                 <a th:href="@{'/athletes/' + ${athlete.id}}">Voir le profil</a>
                 <form th:action="@{/users/{athleteId}/removeFavorite(athleteId=${athlete.id})}" method="post">
                     <button type="submit">Supprimer des favoris</button>
                 </form>
+                <br>
             </li>
         </ul>
     </div>
