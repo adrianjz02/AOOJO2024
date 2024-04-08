@@ -3,6 +3,7 @@ package com.jeuxolympiques.jo2024.service.userService;
 import com.jeuxolympiques.jo2024.model.user.User;
 import com.jeuxolympiques.jo2024.model.user.UserDetailsImpl;
 import com.jeuxolympiques.jo2024.persistence.UserRepository;
+
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;

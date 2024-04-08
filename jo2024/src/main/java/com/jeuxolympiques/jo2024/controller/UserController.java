@@ -37,7 +37,7 @@ public class UserController {
         String userEmail = principal.getName();
         User user = userRepository.findByEmail(userEmail).orElse(null);
         model.addAttribute("user", user);
-        return "favoriteAthletes";
+        return "userViews/favoriteAthletes";
     }
 
 

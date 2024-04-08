@@ -3,6 +3,7 @@ package com.jeuxolympiques.jo2024.model.user;
 import org.junit.jupiter.api.Test;
 
 import com.jeuxolympiques.jo2024.model.Role;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class UserTests {

@@ -2,6 +2,7 @@ package com.jeuxolympiques.jo2024.service.athleteService;
 
 import com.jeuxolympiques.jo2024.model.Athlete;
 import com.jeuxolympiques.jo2024.persistence.AthleteRepository;
+
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
