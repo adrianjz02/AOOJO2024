@@ -16,6 +16,11 @@
         <p>Réalisations : <span th:text="${athlete.achievements}"></span></p>
         <p>Compétences : <span th:text="${athlete.specialSkills}"></span></p>
         <p>Réseaux sociaux : <span th:text="${athlete.socialMediaLinks}"></span></p>
+        <div sec:authorize="hasRole('USER')">
+            <form th:action="@{/users/{id}/favorite(id=${athlete.id})}" method="post">
+                <button type="submit">Ajouter aux favoris</button>
+            </form>
+        </div>
         <a th:href="@{/athletes}">Retour à la liste des athlètes</a>
     </div>
 </body>

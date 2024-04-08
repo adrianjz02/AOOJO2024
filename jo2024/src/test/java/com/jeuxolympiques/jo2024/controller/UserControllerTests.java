@@ -18,7 +18,7 @@ import org.springframework.ui.Model;
 
 import com.jeuxolympiques.jo2024.handler.failureHandler.registrationFailureHandler.RegistrationFailureHandler;
 import com.jeuxolympiques.jo2024.handler.successHandler.RegistrationSuccessHandler;
-import com.jeuxolympiques.jo2024.model.User.User;
+import com.jeuxolympiques.jo2024.model.user.User;
 import com.jeuxolympiques.jo2024.service.userService.UserRegistrationService;
 
 @ExtendWith(MockitoExtension.class)

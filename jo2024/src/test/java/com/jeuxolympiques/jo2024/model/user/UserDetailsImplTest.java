@@ -4,8 +4,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.security.core.GrantedAuthority;
 
 import com.jeuxolympiques.jo2024.model.Role;
-import com.jeuxolympiques.jo2024.model.User.User;
-import com.jeuxolympiques.jo2024.model.User.UserDetailsImpl;
+import com.jeuxolympiques.jo2024.model.user.User;
+import com.jeuxolympiques.jo2024.model.user.UserDetailsImpl;
 
 import java.util.Collection;
 import java.util.List;

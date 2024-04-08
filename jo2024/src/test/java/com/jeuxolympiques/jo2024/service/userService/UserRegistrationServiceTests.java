@@ -2,7 +2,7 @@ package com.jeuxolympiques.jo2024.service.userService;
 
 import com.jeuxolympiques.jo2024.exception.EmailAlreadyExistsException;
 import com.jeuxolympiques.jo2024.exception.PasswordLengthException;
-import com.jeuxolympiques.jo2024.model.User.User;
+import com.jeuxolympiques.jo2024.model.user.User;
 import com.jeuxolympiques.jo2024.persistence.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
