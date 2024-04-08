@@ -44,4 +44,19 @@ public class Athlete {
         this.lastName = lastName;
     }
 
+    @Override
+    public String toString() {
+        return "Athlete{" +
+                "id=" + id +
+                ", photo='" + photo + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", sport='" + sport + '\'' +
+                ", biography='" + biography + '\'' +
+                ", achievements='" + achievements + '\'' +
+                ", specialSkills='" + specialSkills + '\'' +
+                ", socialMediaLinks='" + socialMediaLinks + '\'' +
+                '}';
+    }
+
 }

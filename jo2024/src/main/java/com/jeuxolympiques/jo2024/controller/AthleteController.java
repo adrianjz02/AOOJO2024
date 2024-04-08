@@ -25,8 +25,7 @@ public class AthleteController {
     @Autowired
     private AthleteRepository athleteRepository;
 
-    @Autowired
-    private AthleteService athleteService;
+    @Autowired AthleteService athleteService;
 
     @GetMapping
     public String getAllAthletes(Model model) {
@@ -88,4 +87,6 @@ public class AthleteController {
         athleteRepository.deleteById(id);
         return "redirect:/athletes";
     }
+
+    
 }

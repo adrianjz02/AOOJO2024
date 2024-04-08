@@ -2,7 +2,6 @@ package com.jeuxolympiques.jo2024.handler.successHandler;
 
 import java.io.IOException;
 
-
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
 
@@ -18,13 +17,11 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 
     @Override
     public void onAuthenticationSuccess(
-        jakarta.servlet.http.HttpServletRequest request,
-        jakarta.servlet.http.HttpServletResponse response,
-        Authentication authentication
-    ) throws IOException, jakarta.servlet.ServletException {
+            jakarta.servlet.http.HttpServletRequest request,
+            jakarta.servlet.http.HttpServletResponse response,
+            Authentication authentication) throws IOException, jakarta.servlet.ServletException {
         log.info("L'utilisateur : {} a bien été connecté !",
-            (authentication != null ? authentication.getName() : "Utilisateur inconnu")
-        );
-        response.sendRedirect(LOGIN_SUCCESS_URL);  
+                (authentication != null ? authentication.getName() : "Utilisateur inconnu"));
+        response.sendRedirect(LOGIN_SUCCESS_URL);
     }
 }
