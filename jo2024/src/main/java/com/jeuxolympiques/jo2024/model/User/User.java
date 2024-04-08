@@ -15,7 +15,6 @@ import java.util.HashSet;
 
 import jakarta.persistence.Entity;
 
-
 import com.jeuxolympiques.jo2024.model.Athlete;
 import com.jeuxolympiques.jo2024.model.Role;
 
@@ -55,11 +54,7 @@ public class User {
     private String city;
 
     @ManyToMany
-    @JoinTable(
-        name = "user_favorite_athletes",
-        joinColumns = @JoinColumn(name = "user_id"),
-        inverseJoinColumns = @JoinColumn(name = "athlete_id")
-    )
+    @JoinTable(name = "user_favorite_athletes", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "athlete_id"))
     private Set<Athlete> favoriteAthletes = new HashSet<>();
 
     @Enumerated(EnumType.STRING)

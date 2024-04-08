@@ -4,11 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.security.core.GrantedAuthority;
 
 import com.jeuxolympiques.jo2024.model.Role;
-import com.jeuxolympiques.jo2024.model.user.User;
-import com.jeuxolympiques.jo2024.model.user.UserDetailsImpl;
-
 import java.util.Collection;
-import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class UserDetailsImplTest {
