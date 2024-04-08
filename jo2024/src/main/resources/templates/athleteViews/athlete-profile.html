@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <h1 th:text="${athlete.firstName} + ' ' + ${athlete.lastName}"></h1>
-        <p><img th:src="@{${athlete.photo}}" alt="Photo de l'athlète" width="50" height="30" /></p>
+        <p><img th:src="@{${athlete.photo}}" alt="Photo de l'athlète" width="200" /></p>
         <p>Sport pratiqué : <span th:text="${athlete.sport}"></span></p>
         <p>Biographie : <span th:text="${athlete.biography}"></span></p>
         <p>Réalisations : <span th:text="${athlete.achievements}"></span></p>

@@ -23,11 +23,10 @@
     </div>
     
     <div th:if="${not #lists.isEmpty(user.favoriteAthletes)}">
-        <h2>Mes athlètes favoris</h2>
         <ul class="favorite-athletes">
             <li th:each="athlete : ${user.favoriteAthletes}">
                 <div class="athlete-info">
-                    <img th:src="${athlete.photo}" alt="Photo de l'athlète" />
+                    <img th:src="${athlete.photo}" alt="Photo de l'athlète width="50" height="30" />
                     <h3 th:text="${athlete.firstName} + ' ' + ${athlete.lastName}"></h3>
                 </div>
                 <a th:href="@{'/athletes/' + ${athlete.id}}">Voir le profil</a>
