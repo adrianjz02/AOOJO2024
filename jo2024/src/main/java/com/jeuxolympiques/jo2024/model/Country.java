@@ -1,10 +1,13 @@
 package com.jeuxolympiques.jo2024.model;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -29,6 +32,9 @@ public class Country {
     private Long population;
 
     private String relevantPoint;
+
+    @OneToMany(mappedBy = "country")
+    private List<Athlete> athletes;
 
     // Constructeur avec paramètres
     public Country(String nameCountry, String flag, String capital, Long population, String relevantPoint) {

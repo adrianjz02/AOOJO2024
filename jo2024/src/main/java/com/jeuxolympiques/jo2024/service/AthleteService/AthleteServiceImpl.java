@@ -48,6 +48,7 @@ public class AthleteServiceImpl implements AthleteService {
         existingAthlete.setAchievements(athlete.getAchievements());
         existingAthlete.setSpecialSkills(athlete.getSpecialSkills());
         existingAthlete.setSocialMediaLinks(athlete.getSocialMediaLinks());
+        existingAthlete.setCountry(athlete.getCountry());
 
         return athleteRepository.save(existingAthlete);
     }

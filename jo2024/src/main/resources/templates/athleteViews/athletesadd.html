@@ -37,6 +37,13 @@
         <label for="photo">URL de la photo : </label>
         <input type="text" id="photo" name="photo" required><br>
 
+        <label for="country">Pays : </label>
+        <select id="country" name="country" required>
+            <option value="">Sélectionnez un pays</option>
+            <option th:each="country : ${countries}" th:value="${country.id}" th:text="${country.nameCountry}"></option>
+        </select><br>
+
+
         <button type="submit">Ajouter</button>
     </form>
 </body>

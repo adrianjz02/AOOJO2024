@@ -36,6 +36,10 @@ public class Athlete {
     @Column(length = 100)
     private String socialMediaLinks;
 
+    @ManyToOne
+    @JoinColumn // Utilisez le nom par défaut pour la jointure
+    private Country country;
+
     public Athlete() {
     }
 

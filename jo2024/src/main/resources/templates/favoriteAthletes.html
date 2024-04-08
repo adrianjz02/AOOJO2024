@@ -46,6 +46,19 @@
         .buttons a, .buttons button {
             margin: 5px 0;
         }
+        button.favorite {
+        background-color: #ff6347;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button.favorite:hover {
+        background-color: #ff4d40;
+    }
     </style>
 </head>
 
@@ -66,7 +79,7 @@
                 </div>
                 <a th:href="@{'/athletes/' + ${athlete.id}}">Voir le profil</a>
                 <form th:action="@{/users/{athleteId}/removeFavorite(athleteId=${athlete.id})}" method="post">
-                    <button type="submit" class="btn btn-primary">Supprimer des favoris</button>
+                    <button type="submit" class="btn btn-primary favorite">Supprimer des favoris</button>
                 </form>
                 <br>
             </li>

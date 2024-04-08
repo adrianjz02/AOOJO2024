@@ -1,8 +1,10 @@
 package com.jeuxolympiques.jo2024.controller;
 
 import com.jeuxolympiques.jo2024.model.Athlete;
+import com.jeuxolympiques.jo2024.model.Country;
 import com.jeuxolympiques.jo2024.model.user.User;
 import com.jeuxolympiques.jo2024.persistence.AthleteRepository;
+import com.jeuxolympiques.jo2024.persistence.CountryRepository;
 import com.jeuxolympiques.jo2024.persistence.UserRepository;
 import com.jeuxolympiques.jo2024.service.athleteService.AthleteService;
 
@@ -30,6 +32,9 @@ public class AthleteController {
 
     @Autowired AthleteService athleteService;
 
+    @Autowired
+    private CountryRepository countryRepository;
+
     private UserRepository userRepository;
 
     @Autowired
@@ -50,11 +55,12 @@ public class AthleteController {
     public String showAddAthleteForm(Model model) {
         log.info("Affichage du formulaire d'ajout d'athlète");
         model.addAttribute("athlete", new Athlete());
+        model.addAttribute("countries", countryRepository.findAll());
         return "athleteViews/athletesAdd";
     }
 
     @PostMapping("/add")
-    public String addAthlete(@ModelAttribute Athlete athlete) {
+    public String addAthlete(@ModelAttribute Athlete athlete, Model model) {
         log.info("Ajout d'un nouvel athlète : {}", athlete);
         athleteRepository.save(athlete);
         return "redirect:/athletes";
@@ -86,16 +92,31 @@ public class AthleteController {
             return "athlete-404";
         }
         model.addAttribute("athlete", athlete);
+        model.addAttribute("countries", countryRepository.findAll());
         return "athleteViews/athletesUpdate";
     }
 
     @PostMapping("/update/{id}")
-    public String updateAthlete(@PathVariable Long id, @ModelAttribute Athlete athlete) {
-        log.info("Mise à jour de l'athlète avec l'ID : {}", id);
-        athlete.setId(id);
-        athleteService.updateAthlete(athlete);
-        return "redirect:/athletes";
-    }
+public String updateAthlete(@PathVariable Long id, @ModelAttribute Athlete athlete, Model model) {
+    log.info("Mise à jour de l'athlète avec l'ID : {}", id);
+
+    // Récupérer l'objet Country sélectionné dans le formulaire
+    Country selectedCountry = countryRepository.findById(athlete.getCountry().getId()).orElse(null);
+
+    // Associer l'objet Country sélectionné à l'objet Athlete
+    athlete.setCountry(selectedCountry);
+
+    // Mettre à jour l'objet Athlete dans la base de données
+    athlete.setId(id);
+    athleteService.updateAthlete(athlete);
+
+    // Ajouter la liste des pays au modèle pour la vue de mise à jour
+    model.addAttribute("countries", countryRepository.findAll());
+
+    return "redirect:/athletes";
+}
+
+
 
     @GetMapping("/delete/{id}")
     public String deleteAthlete(@PathVariable Long id) {
