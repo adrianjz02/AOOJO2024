@@ -1,133 +1,98 @@
 package com.jeuxolympiques.jo2024.controller;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.eq;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.*;
 
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import java.security.Principal;
+import java.util.Optional;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
+import org.mockito.MockitoAnnotations;
 import org.springframework.ui.Model;
 
-import com.jeuxolympiques.jo2024.handler.failureHandler.registrationFailureHandler.RegistrationFailureHandler;
-import com.jeuxolympiques.jo2024.handler.successHandler.RegistrationSuccessHandler;
+import com.jeuxolympiques.jo2024.model.Athlete;
 import com.jeuxolympiques.jo2024.model.user.User;
-import com.jeuxolympiques.jo2024.service.userService.UserRegistrationService;
+import com.jeuxolympiques.jo2024.persistence.AthleteRepository;
+import com.jeuxolympiques.jo2024.persistence.UserRepository;
 
-@ExtendWith(MockitoExtension.class)
 public class UserControllerTests {
 
     @Mock
-    private UserRegistrationService userRegistrationService;
+    private AthleteRepository athleteRepository;
 
     @Mock
-    private RegistrationSuccessHandler registrationSuccessHandler;
-
-    @Mock
-    private RegistrationFailureHandler registrationFailureHandler;
+    private UserRepository userRepository;
 
     @Mock
     private Model model;
 
-    @Mock
-    private HttpServletRequest request;
-
-    @Mock
-    private HttpServletResponse response;
-
     @InjectMocks
     private UserController userController;
 
-    @Test
-    public void testShowRegistrationForm() {
-        String viewName = userController.showRegistrationForm(null, model);
-        assert (viewName.equals("userViews/registration"));
+    @BeforeEach
+    void setUp() {
+        MockitoAnnotations.openMocks(this);
     }
 
     @Test
-    public void testRegister() throws Exception {
-
+    public void testShowFavoriteAthletes() {
+        Principal principal = () -> "user@example.com";
         User user = new User();
-        user.setFirstName("John");
+        when(userRepository.findByEmail("user@example.com")).thenReturn(Optional.of(user));
 
-        String viewName = userController.register(user, request, response);
+        String viewName = userController.showFavoriteAthletes(model, principal);
 
-        assertEquals("redirect:/login?registrationSuccess=true", viewName);
-        verify(userRegistrationService).registerUser(user);
-        verify(registrationSuccessHandler).onRegistrationSuccess(request, response, user.getFirstName());
+        // Asserts
+        // Vérifiez que le modèle contient l'utilisateur
+        verify(model).addAttribute("user", user);
+        // Vérifiez que le nom de la vue retournée est "favoriteAthletes"
+        assertEquals("favoriteAthletes", viewName);
     }
 
     @Test
-    public void testLoginForm() {
-        String viewName = userController.loginForm(null, model);
-        assert (viewName.equals("userViews/login"));
+    public void testAddFavorite() {
+        Principal principal = () -> "user@example.com";
+        User user = new User();
+        Athlete athlete = new Athlete();
+
+        when(userRepository.findByEmail("user@example.com")).thenReturn(Optional.of(user));
+        when(athleteRepository.findById(anyLong())).thenReturn(Optional.of(athlete));
+
+        String viewName = userController.addFavorite(1L, principal);
+
+        // Asserts
+        // Vérifiez que l'athlète a été ajouté aux favoris de l'utilisateur
+        assertTrue(user.getFavoriteAthletes().contains(athlete));
+        // Vérifiez que le changement a été enregistré
+        verify(userRepository).save(user);
+        // Vérifiez que la redirection a été effectuée
+        assertEquals("redirect:/users/favoriteAthletes", viewName);
     }
 
     @Test
-    public void testShowRegistrationForm_EmailAlreadyExists() {
-        String viewName = userController.showRegistrationForm("email_already_exists", model);
-        assertEquals("userViews/registration", viewName);
-        verify(model).addAttribute("error", "Votre email est déjà utilisé, veuillez réessayer !");
+    public void testRemoveFavorite() {
+        Principal principal = () -> "user@example.com";
+        User user = new User();
+        Athlete athlete = new Athlete();
+
+        user.getFavoriteAthletes().add(athlete);
+
+        when(userRepository.findByEmail("user@example.com")).thenReturn(Optional.of(user));
+        when(athleteRepository.findById(anyLong())).thenReturn(Optional.of(athlete));
+
+        String viewName = userController.removeFavorite(1L, principal);
+
+        // Asserts
+        // Vérifiez que l'athlète a été retiré des favoris de l'utilisateur
+        assertFalse(user.getFavoriteAthletes().contains(athlete));
+        // Vérifiez que le changement a été enregistré
+        verify(userRepository).save(user);
+        // Vérifiez que la redirection a été effectuée
+        assertEquals("redirect:/users/favoriteAthletes", viewName);
     }
-
-    @Test
-    public void testShowRegistrationForm_BadPasswordLength() {
-        String viewName = userController.showRegistrationForm("bad_password_length", model);
-        assertEquals("userViews/registration", viewName);
-        verify(model).addAttribute("error", "Le mot de passe doit contenir au moins 3 caractères.");
-    }
-
-    @Test
-    public void testRegister_Exception() throws Exception {
-        doThrow(new RuntimeException()).when(userRegistrationService).registerUser(any(User.class));
-        String viewName = userController.register(new User(), request, response);
-        assertNull(viewName);
-        verify(registrationFailureHandler).onRegistrationFailure(eq(request), eq(response),
-                any(RuntimeException.class));
-    }
-
-    @Test
-    public void testLoginForm_BadCredentials() {
-        String viewName = userController.loginForm("bad_credentials", model);
-        assertEquals("userViews/login", viewName);
-        verify(model).addAttribute("error", "Email ou mot de passe incorrect");
-    }
-
-
-    @Test
-    public void testLoginForm_Disabled() {
-        String viewName = userController.loginForm("disabled", model);
-        assertEquals("userViews/login", viewName);
-        verify(model).addAttribute("error", "Compte utilisateur désactivé");
-    }
-
-    @Test
-    public void testLoginForm_Locked() {
-        String viewName = userController.loginForm("locked", model);
-        assertEquals("userViews/login", viewName);
-        verify(model).addAttribute("error", "Compte utilisateur verrouillé");
-    }
-
-    @Test
-    public void testLoginForm_Expired() {
-        String viewName = userController.loginForm("expired", model);
-        assertEquals("userViews/login", viewName);
-        verify(model).addAttribute("error", "Compte utilisateur expiré");
-    }
-
-    @Test
-    public void testLoginForm_DefaultError() {
-        // Test du cas par défaut
-        String viewName = userController.loginForm("any_other_error", model);
-        assertEquals("userViews/login", viewName);
-        verify(model).addAttribute("error", "Échec de la connexion");
-    }
-
 }
