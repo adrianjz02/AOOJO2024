@@ -19,10 +19,14 @@
         <div style="display: flex; justify-content: space-between;">
             <a th:href="@{/athletes}">Retour à la liste des athlètes</a>
             <div sec:authorize="hasRole('USER')">
-                <form th:action="@{/users/{athleteId}/addFavorite(athleteId=${athlete.id})}" method="post">
+                <form th:if="${!isFavorite}" th:action="@{/users/{athleteId}/addFavorite(athleteId=${athlete.id})}" method="post">
                     <button type="submit">Ajouter aux favoris</button>
-                </form>            
+                </form>
+                <form th:if="${isFavorite}" th:action="@{/users/{athleteId}/removeFavorite(athleteId=${athlete.id})}" method="post">
+                    <button type="submit">Supprimer des favoris</button>
+                </form>
             </div>
+            
         </div>
         
     </div>

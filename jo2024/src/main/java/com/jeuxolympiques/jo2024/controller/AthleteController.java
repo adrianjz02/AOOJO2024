@@ -1,12 +1,15 @@
 package com.jeuxolympiques.jo2024.controller;
 
 import com.jeuxolympiques.jo2024.model.Athlete;
+import com.jeuxolympiques.jo2024.model.user.User;
 import com.jeuxolympiques.jo2024.persistence.AthleteRepository;
+import com.jeuxolympiques.jo2024.persistence.UserRepository;
 import com.jeuxolympiques.jo2024.service.athleteService.AthleteService;
 
 import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,6 +29,14 @@ public class AthleteController {
     private AthleteRepository athleteRepository;
 
     @Autowired AthleteService athleteService;
+
+    private UserRepository userRepository;
+
+    @Autowired
+    public AthleteController(AthleteRepository athleteRepository, UserRepository userRepository) {
+        this.athleteRepository = athleteRepository;
+        this.userRepository = userRepository;
+    }
 
     @GetMapping
     public String getAllAthletes(Model model) {
@@ -50,13 +61,18 @@ public class AthleteController {
     }
 
     @GetMapping("/{id}")
-    public String getAthleteProfile(@PathVariable Long id, Model model) {
+    public String getAthleteProfile(@PathVariable Long id, Model model, Authentication authentication) {
         log.info("Affichage du profil de l'athlète avec l'ID : {}", id);
         Athlete athlete = athleteRepository.findById(id).orElse(null);
+        boolean isFavorite = false;
+        User user = userRepository.findByEmail(authentication.getName()).orElseThrow(() -> new RuntimeException("User not found"));
+        isFavorite = user.getFavoriteAthletes().contains(athlete);       
+        
         if (athlete == null) {
             return "athlete-404";
         }
         model.addAttribute("athlete", athlete);
+        model.addAttribute("isFavorite", isFavorite);
         return "athleteViews/athlete-profile";
     }
 

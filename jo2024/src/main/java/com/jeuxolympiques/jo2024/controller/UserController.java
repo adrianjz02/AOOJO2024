@@ -43,6 +43,7 @@ public class UserController {
 
     @PostMapping("/{athleteId}/addFavorite")
     public String addFavorite(@PathVariable Long athleteId, Principal principal) {
+        log.info("Ajout d'un athlète favori");
         User user = userRepository.findByEmail(principal.getName()).orElseThrow();
         Athlete athlete = athleteRepository.findById(athleteId).orElseThrow();
 
@@ -54,6 +55,7 @@ public class UserController {
 
     @PostMapping("/{athleteId}/removeFavorite")
     public String removeFavorite(@PathVariable Long athleteId, Principal principal) {
+        log.info("Suppression d'un athlète favori");
         User user = userRepository.findByEmail(principal.getName()).orElseThrow();
         Athlete athlete = athleteRepository.findById(athleteId).orElseThrow();
 
