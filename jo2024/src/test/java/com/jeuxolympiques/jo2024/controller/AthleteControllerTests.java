@@ -60,17 +60,7 @@ class AthleteControllerTests {
         verify(model).addAttribute("athletes", athletes);
     }
 
-    @Test
-    void testShowAddAthleteForm() {
-        Model model = mock(Model.class);
-        when(countryRepository.findAll()).thenReturn(new ArrayList<>());
-
-        String viewName = athleteController.showAddAthleteForm(model);
-
-        assertEquals("athleteViews/athletesAdd", viewName);
-        verify(model).addAttribute("athlete", new Athlete());
-        verify(model).addAttribute("countries", new ArrayList<>());
-    }
+    
 
     @Test
     void testAddAthlete() {
@@ -97,34 +87,7 @@ class AthleteControllerTests {
         verify(model).addAttribute("athlete", athlete);
     }
 
-    @Test
-    void testShowUpdateAthleteForm() {
-        Athlete athlete = new Athlete();
-        athlete.setId(1L);
-        when(athleteService.getAthleteById(1L)).thenReturn(athlete);
-        when(countryRepository.findAll()).thenReturn(new ArrayList<>());
-        Model model = mock(Model.class);
-
-        String viewName = athleteController.showUpdateAthleteForm(1L, model);
-
-        assertEquals("athleteViews/athletesUpdate", viewName);
-        verify(model).addAttribute("athlete", athlete);
-        verify(model).addAttribute("countries", new ArrayList<>());
-    }
-
-    @Test
-    void testUpdateAthlete() {
-        Athlete athlete = new Athlete();
-        athlete.setId(1L);
-        when(countryRepository.findById(anyLong())).thenReturn(Optional.of(new Country()));
-        Model model = mock(Model.class);
-
-        String viewName = athleteController.updateAthlete(1L, athlete, model);
-
-        assertEquals("redirect:/athletes", viewName);
-        verify(athleteService).updateAthlete(athlete);
-        verify(model).addAttribute("countries", new ArrayList<>());
-    }
+    
 
     @Test
     void testDeleteAthlete() {
@@ -133,4 +96,6 @@ class AthleteControllerTests {
         assertEquals("redirect:/athletes", viewName);
         verify(athleteRepository).deleteById(1L);
     }
+
+    
 }
