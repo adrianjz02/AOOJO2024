@@ -23,7 +23,7 @@ public class CountryTests {
         Long population = 67000000L;
         String relevantPoint = "Eiffel Tower";
 
-        Country country = new Country(id, nameCountry, flag, capital, population, relevantPoint);
+        Country country = new Country(id, nameCountry, flag, capital, population, relevantPoint, null);
 
         // Vérifiez que les valeurs ont été correctement initialisées
         assertEquals(id, country.getId());
