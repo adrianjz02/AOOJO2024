@@ -110,7 +110,7 @@ public class UserDetailsImplTest {
         String city = "Paris";
         Role role = Role.ADMIN;
 
-        User user = new User(id, email, password, firstName, lastName, phoneNumber, city, role);
+        User user = new User(id, email, password, firstName, lastName, phoneNumber, city, null, role);
 
         // Vérifiez si les valeurs ont été correctement initialisées par le constructeur
         assertEquals(id, user.getId());
