@@ -1,4 +1,4 @@
-package com.jeuxolympiques.jo2024.model.User;
+package com.jeuxolympiques.jo2024.model.user;
 
 import java.util.Collection;
 import java.util.List;

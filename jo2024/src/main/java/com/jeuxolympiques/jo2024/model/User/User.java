@@ -1,4 +1,4 @@
-package com.jeuxolympiques.jo2024.model.User;
+package com.jeuxolympiques.jo2024.model.user;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -6,7 +6,17 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 
+import java.util.Set;
+import java.util.HashSet;
+
+import jakarta.persistence.Entity;
+
+
+import com.jeuxolympiques.jo2024.model.Athlete;
 import com.jeuxolympiques.jo2024.model.Role;
 
 import jakarta.persistence.Column;
@@ -44,6 +54,14 @@ public class User {
     @Column
     private String city;
 
+    @ManyToMany
+    @JoinTable(
+        name = "user_favorite_athletes",
+        joinColumns = @JoinColumn(name = "user_id"),
+        inverseJoinColumns = @JoinColumn(name = "athlete_id")
+    )
+    private Set<Athlete> favoriteAthletes = new HashSet<>();
+
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Role role = Role.USER;
@@ -57,6 +75,8 @@ public class User {
         this.phoneNumber = phoneNumber;
         this.city = city;
         this.role = Role.USER;
+        this.favoriteAthletes = new HashSet<>(); // Initialiser le champ favoriteAthletes
     }
 
+    
 }

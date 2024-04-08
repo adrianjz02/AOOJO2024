@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <title>Mes athlètes favoris</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/athlete.css}">
+    <style>
+        p {
+            font-size: 20px;
+            color: #333;
+            text-align: center;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Mes athlètes favoris</h1>
+    <a th:href="@{/accueil}">Accueil</a>
+    
+    <div th:if="${#lists.isEmpty(user.favoriteAthletes)}">
+        <p>Aucun athlète favori pour le moment.</p>
+    </div>
+    
+    <div th:if="${not #lists.isEmpty(user.favoriteAthletes)}">
+        <ul>
+            <li th:each="athlete : ${user.favoriteAthletes}">
+                <p th:text="${athlete.firstName} + ' ' + ${athlete.lastName}"></p>
+                <a th:href="@{'/athletes/' + ${athlete.id}}">Voir le profil</a>
+                <!-- Formulaire pour retirer l'athlète des favoris -->
+                <form th:action="@{/users/removeFavorite/{id}(id=${athlete.id})}" method="post">
+                    <button type="submit">Supprimer des favoris</button>
+                </form>
+                           
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

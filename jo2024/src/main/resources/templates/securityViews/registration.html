@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Créer un compte</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            padding: 50px;
+        }
+
+        .container {
+            width: 300px;
+            padding: 20px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-signin-heading {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .alert {
+            margin: 0 auto;
+            width: 50%;
+            text-align: center;
+        }
+
+        .btn-primary {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div th:if="${error}" class="alert alert-danger text-center">
+        <strong>Echec de l'inscription : </strong>
+        <span th:text="${error}"></span>
+      </div>
+      <br>
+    <div class="container">
+        <form method="post" action="/registration">
+            <h2 class="form-signin-heading">Inscription</h2>
+
+            <div class="form-group">
+                <input type="email" id="email" name="email" class="form-control" placeholder="Email" required autofocus>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" name="password" class="form-control" placeholder="Mot de passe"
+                    required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="firstName" id="firstName" class="form-control" placeholder="Prénom" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Nom" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="phoneNumber" id="phoneNumber" class="form-control" placeholder="Numéro de téléphone" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="city" id="city" class="form-control" placeholder="Ville" required>
+            </div>
+            <br>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">S'inscrire</button>
+            <br>
+            <a href="/login"><button class="btn btn-lg btn-primary btn-block" type="button"> Se connecter</button></a>
+        </form>
+</body>
+
+</html>
