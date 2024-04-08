@@ -30,7 +30,30 @@ public class Country {
 
     private String relevantPoint;
 
+    // Constructeur avec paramètres
+    public Country(String nameCountry, String flag, String capital, Long population, String relevantPoint) {
+        this.nameCountry = nameCountry;
+        this.flag = flag;
+        this.capital = capital;
+        this.population = population;
+        this.relevantPoint = relevantPoint;
+    }
+
+    // Constructeur par défaut
     public Country() {
     }
-}
 
+    @Override
+    public String toString() {
+        return "Country{" +
+                "id=" + id +
+                ", nameCountry='" + nameCountry + '\'' +
+                ", flag='" + flag + '\'' +
+                ", capital='" + capital + '\'' +
+                ", population=" + population +
+                ", relevantPoint='" + relevantPoint + '\'' +
+                '}';
+    }
+
+    
+}
