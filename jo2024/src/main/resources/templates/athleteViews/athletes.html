@@ -3,7 +3,7 @@
 
 <head>
     <title>Liste des athlètes</title>
-    <link rel="stylesheet" type="text/css" th:href="@{/athlete.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/athlete.css}">    
 </head>
 
 <body>
@@ -25,7 +25,7 @@
                 <td th:text="${athlete.firstName}"></td>
                 <td th:text="${athlete.lastName}"></td>
                 <td><a th:href="@{/athletes/{id}(id=${athlete.id})}">Voir le profil</a></td>
-                <td>
+                </td>
                     <div sec:authorize="hasRole('ADMIN')">
                         <a th:href="@{/athletes/update/{id}(id=${athlete.id})}" >Modifier</a>
                     </div>

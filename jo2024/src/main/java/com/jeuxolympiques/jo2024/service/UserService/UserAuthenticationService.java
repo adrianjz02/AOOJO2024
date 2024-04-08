@@ -1,7 +1,7 @@
 package com.jeuxolympiques.jo2024.service.userService;
 
-import com.jeuxolympiques.jo2024.model.User.User;
-import com.jeuxolympiques.jo2024.model.User.UserDetailsImpl;
+import com.jeuxolympiques.jo2024.model.user.User;
+import com.jeuxolympiques.jo2024.model.user.UserDetailsImpl;
 import com.jeuxolympiques.jo2024.persistence.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

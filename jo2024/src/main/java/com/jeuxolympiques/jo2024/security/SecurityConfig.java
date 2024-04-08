@@ -24,7 +24,7 @@ public class SecurityConfig {
         };
     
         public static final String[] PRIVATE_URLS = {
-                "/countries", "/countries/**", "/athletes", "/athletes/**"
+                "/countries", "/countries/**", "/athletes", "/athletes/**", "/users/**"
         };
 
         @Bean
