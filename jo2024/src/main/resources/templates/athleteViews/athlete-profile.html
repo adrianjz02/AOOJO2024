@@ -10,18 +10,21 @@
 <body>
     <div class="container">
         <h1 th:text="${athlete.firstName} + ' ' + ${athlete.lastName}"></h1>
-        <p><img th:src="@{${athlete.photo}}" alt="Photo de l'athlète" width="200" /></p>
+        <p><img th:src="@{${athlete.photo}}" alt="Photo de l'athlète" width="50" height="30" /></p>
         <p>Sport pratiqué : <span th:text="${athlete.sport}"></span></p>
         <p>Biographie : <span th:text="${athlete.biography}"></span></p>
         <p>Réalisations : <span th:text="${athlete.achievements}"></span></p>
         <p>Compétences : <span th:text="${athlete.specialSkills}"></span></p>
         <p>Réseaux sociaux : <span th:text="${athlete.socialMediaLinks}"></span></p>
-        <div sec:authorize="hasRole('USER')">
-            <form th:action="@{/users/{id}/favorite(id=${athlete.id})}" method="post">
-                <button type="submit">Ajouter aux favoris</button>
-            </form>
+        <div style="display: flex; justify-content: space-between;">
+            <a th:href="@{/athletes}">Retour à la liste des athlètes</a>
+            <div sec:authorize="hasRole('USER')">
+                <form th:action="@{/users/{athleteId}/addFavorite(athleteId=${athlete.id})}" method="post">
+                    <button type="submit">Ajouter aux favoris</button>
+                </form>            
+            </div>
         </div>
-        <a th:href="@{/athletes}">Retour à la liste des athlètes</a>
+        
     </div>
 </body>
 

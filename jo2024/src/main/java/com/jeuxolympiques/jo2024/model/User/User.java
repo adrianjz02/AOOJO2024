@@ -77,6 +77,4 @@ public class User {
         this.role = Role.USER;
         this.favoriteAthletes = new HashSet<>(); // Initialiser le champ favoriteAthletes
     }
-
-    
 }
